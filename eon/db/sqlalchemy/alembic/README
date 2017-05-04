@@ -1,0 +1,16 @@
+Please see https://alembic.readthedocs.org/en/latest/index.html for general documentation
+
+To create alembic migrations use:
+$ eon-dbsync revision --message --autogenerate
+
+Stamp db with most recent migration version, without actually running migrations
+$ eon-dbsync stamp --revision head
+
+Upgrade can be performed by:
+$ eon-dbsync - for backward compatibility
+$ eon-dbsync upgrade
+# eon-dbsync upgrade --revision head
+
+Downgrading db:
+$ eon-dbsync downgrade
+$ eon-dbsync downgrade --revision base

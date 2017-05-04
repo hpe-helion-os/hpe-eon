@@ -1,0 +1,26 @@
+#!/bin/bash
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+if [ -d /usr/share/pyshared/eon/tests ]; then
+  rm -rf  /usr/share/pyshared/eon/tests
+fi
+
+if [ ! -d /usr/lib/python2.7/dist-packages/eon ]; then
+  mkdir -p /usr/lib/python2.7/dist-packages/eon
+  cd /usr/lib/python2.7/dist-packages/eon
+  cp -r --symbolic-link /usr/share/pyshared/eon/* .
+fi
+
+exit 0

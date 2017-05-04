@@ -1,0 +1,1338 @@
+# Translations template for eon.
+#
+# (c) Copyright 2013-2017 Hewlett Packard Enterprise Development Company LP
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may
+# not use this file except in compliance with the License. You may obtain
+# a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations
+# under the License.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: eon 8.0.0.20\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-10-15 18:04+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: eon/api/middleware/context.py:17
+msgid "Role used to identify an authenticated user as administrator."
+msgstr "管理者として認証されるユーザーの識別に使用される役割。"
+
+#: eon/api/middleware/context.py:32
+msgid "Unable to retrieve request id from context"
+msgstr "コンテキストからリクエストIDを取得できません"
+
+#: eon/api/middleware/context.py:85
+msgid "Invalid service catalog json."
+msgstr "無効なサービスカタログJSONです。"
+
+#: eon/api/middleware/version_negotiation.py:31
+#, python-format
+msgid "Determining version of request: %(method)s %(path)s Accept: %(accept)s"
+msgstr "リクエストのバージョンを確認中です: %(method)s %(path)s 許可: %(accept)s"
+
+#: eon/api/middleware/version_negotiation.py:42
+msgid "Using url versioning"
+msgstr "URLバージョン化を使用中です"
+
+#: eon/api/middleware/version_negotiation.py:49
+msgid "Unknown version. Returning version choices."
+msgstr "不明なバージョン。バージョン選択肢を返しています。"
+
+#: eon/api/middleware/version_negotiation.py:54
+#, python-format
+msgid "Matched version: v%d"
+msgstr "一致したバージョン: v%d"
+
+#: eon/api/v1/controller.py:20
+#, python-format
+msgid "Validating required attributes...Got: %s, Required attributes: %s"
+msgstr "必要な属性の検証中... 受け取った:%s、必要な属性:%s"
+
+#: eon/api/v1/esx_proxy.py:75
+msgid "Fetching list of all registered ESX-Proxy"
+msgstr "すべての登録済みESXプロキシのリストをフェッチ中です"
+
+#: eon/api/v1/esx_proxy.py:99
+#, python-format
+msgid "Validating ESX-Proxy before creating, ESX-Proxy: %s"
+msgstr "作成前にESXプロキシの検証中、ESXプロキシ:%s"
+
+#: eon/api/v1/esx_proxy.py:104
+#: eon/api/v1/esx_proxy.py:119
+#, python-format
+msgid "ESX-Proxy by name (%s) already exists"
+msgstr "名前(%s)のESXプロキシはすでに存在します"
+
+#: eon/api/v1/esx_proxy.py:107
+#: eon/api/v1/esx_proxy.py:122
+#, python-format
+msgid "ESX-Proxy by name (%s) not found"
+msgstr "名前(%s)のESXプロキシが見つかりません"
+
+#: eon/api/v1/esx_proxy.py:114
+#, python-format
+msgid "Validating ESX-Proxy before updating, ESX-Proxy id: %s"
+msgstr "アップデート前にESXプロキシの検証中、ESXプロキシ ID:%s"
+
+#: eon/api/v1/esx_proxy.py:129
+#, python-format
+msgid "Validating ESX-Proxy(id: %s) before deleting"
+msgstr "削除前に ESXプロキシ(ID: %s)の検証中"
+
+#: eon/api/v1/esx_proxy.py:137
+#, python-format
+msgid "Cannot delete! there are active resource(s) associated to vCenter (%s)"
+msgstr "削除できません! vCenter(%s)に関連付けられたアクティブリソースが存在します"
+
+#: eon/api/v1/esx_proxy.py:141
+#, python-format
+msgid "Failed to delete %s"
+msgstr "%s の削除に失敗しました"
+
+#: eon/api/v1/esx_proxy.py:164
+#, python-format
+msgid "Registering ESX-Proxy, context: %s, ESX-Proxy data: %s"
+msgstr "ESXプロキシの登録中、コンテキスト:%s、ESXプロキシデータ:%s"
+
+#: eon/api/v1/esx_proxy.py:168
+#, python-format
+msgid "Required attributes validation failed: %s"
+msgstr "必要な属性の確認に失敗しました:%s"
+
+#: eon/api/v1/esx_proxy.py:176
+#, python-format
+msgid "Cannot create ESX-Proxy reason: %s"
+msgstr "ESXプロキシを作成できません。理由:%s"
+
+#: eon/api/v1/esx_proxy.py:181
+msgid "Successfully created esx_proxy"
+msgstr "ESXプロキシは正常に作成されました"
+
+#: eon/api/v1/esx_proxy.py:186
+msgid "ESX-Proxy with identifier already exists!"
+msgstr "識別子を持つESXプロキシはすでに存在します!"
+
+#: eon/api/v1/esx_proxy.py:190
+#, python-format
+msgid "Failed to add esx_proxy metadata. Got error: %(e)s"
+msgstr "ESXプロキシ メタデータの追加に失敗しました。受け取ったエラー: %(e)s"
+
+#: eon/api/v1/esx_proxy.py:204
+#, python-format
+msgid "Updating ESX-Proxy, context: %s"
+msgstr "ESXプロキシのアップデート中、コンテキスト:%s"
+
+#: eon/api/v1/esx_proxy.py:205
+#, python-format
+msgid "ESX-Proxy data: %s"
+msgstr "ESXプロキシデータ:%s"
+
+#: eon/api/v1/esx_proxy.py:210
+#, python-format
+msgid "Required attribute validation failed: %s"
+msgstr "必要な属性の確認に失敗しました:%s"
+
+#: eon/api/v1/esx_proxy.py:216
+#, python-format
+msgid "Cannot update ESX-Proxy(ID: %s) reason: %s"
+msgstr "ESXプロキシ(ID: %s)をアップデートできません 理由: %s"
+
+#: eon/api/v1/esx_proxy.py:222
+msgid "Successfully updated esx_proxy"
+msgstr "ESXプロキシは正常にアップデートされました"
+
+#: eon/api/v1/esx_proxy.py:228
+#, python-format
+msgid "Failed to update vCenter. Got error: %(e)s"
+msgstr "vCenterのアップデートに失敗しました。受け取ったエラー: %(e)s"
+
+#: eon/api/v1/esx_proxy.py:246
+#, python-format
+msgid "Deleting ESX-Proxy, context: %s id: %s"
+msgstr "ESXプロキシの削除中、コンテキスト:%s ID:%s"
+
+#: eon/api/v1/esx_proxy.py:250
+#, python-format
+msgid "Cannot delete ESX-Proxy(ID: %s) reason: %s"
+msgstr "ESXプロキシ(ID: %s)を削除できません 理由: %s"
+
+#: eon/api/v1/esx_proxy.py:255
+msgid "Successfully destroyed esx_proxy"
+msgstr "ESXプロキシは正常に破棄されました"
+
+#: eon/api/v1/esx_proxy.py:259
+#, python-format
+msgid "Failed to delete esx_proxy. Got error: %(e)s"
+msgstr "ESXプロキシの削除に失敗しました。受け取ったエラー: %(e)s"
+
+#: eon/api/v1/esx_proxy.py:275
+#: eon/api/v1/managed_entity.py:629
+#, python-format
+msgid "Store for scheme %s not found"
+msgstr "スキーム %s のストアが見つかりません"
+
+#: eon/api/v1/managed_entity.py:41
+msgid "The maximum number of clusters supported per proxy vm"
+msgstr "プロキシVMあたりサポートされるクラスターの最大数"
+
+#: eon/api/v1/managed_entity.py:89
+#, python-format
+msgid "Unable to display the resources:got the error : %s"
+msgstr "リソースを表示できません。受け取ったエラー: %s"
+
+#: eon/api/v1/managed_entity.py:121
+#, python-format
+msgid "Registering resource, context: %s, vCenter: %s, Resource: %s"
+msgstr "リソースの登録中、コンテキスト:%s、vCenter:%s、リソース:%s"
+
+#: eon/api/v1/managed_entity.py:139
+#, python-format
+msgid "ESX-Proxy VM %s successfully created "
+msgstr "ESXプロキシ VM %s は正常に作成されました "
+
+#: eon/api/v1/managed_entity.py:164
+msgid "Checking if max supported clusters limit reached"
+msgstr "サポートされるクラスターの最大数に達していないか確認中です"
+
+#: eon/api/v1/managed_entity.py:166
+msgid "Max supported clusters limit reached, Creating"
+msgstr "サポートされるクラスターの最大数に達しました、作成中"
+
+#: eon/api/v1/managed_entity.py:170
+#, python-format
+msgid "Using existing ESX-Proxy: %s"
+msgstr "既存のESXプロキシを使用しています:%s"
+
+#: eon/api/v1/managed_entity.py:204
+#, python-format
+msgid "Unable to display the resource:got the error : %s"
+msgstr "リソースを表示できません。受け取ったエラー: %s"
+
+#: eon/api/v1/managed_entity.py:219
+#, python-format
+msgid "state_change for resource: %s state = %s"
+msgstr "リソースの状態変化: %s 状態 = %s"
+
+#: eon/api/v1/managed_entity.py:256
+#, python-format
+msgid "Import resource %s "
+msgstr "リソース %s のインポート "
+
+#: eon/api/v1/managed_entity.py:265
+#, python-format
+msgid "Imported resource %s and imported id is %s"
+msgstr "インポートされたリソース %s およびインポートされたIDは %s です"
+
+#: eon/api/v1/managed_entity.py:279
+#, python-format
+msgid "Imported resource %s and sending response %s"
+msgstr "インポートされたリソース %s および応答 %s を送信しています"
+
+#: eon/api/v1/managed_entity.py:287
+#, python-format
+msgid "Import resource information passed is %s"
+msgstr "渡されたインポートリソース情報は %s です"
+
+#: eon/api/v1/managed_entity.py:293
+#, python-format
+msgid "Resource name %s is already importedresource_name"
+msgstr "リソース名 %s はすでにimportedresource_nameです"
+
+#: eon/api/v1/managed_entity.py:302
+#, python-format
+msgid "Unable to import the resource  (%s) Got error: %s"
+msgstr "リソース (%s) をインポートできません。受け取ったエラー: %s"
+
+#: eon/api/v1/managed_entity.py:355
+#, python-format
+msgid "Resource name %s is not imported"
+msgstr "リソース名 %s はインポートされません"
+
+#: eon/api/v1/managed_entity.py:358
+#, python-format
+msgid "Found imported resource %s"
+msgstr "インポートされたリソース %s が見つかりました"
+
+#: eon/api/v1/managed_entity.py:362
+#, python-format
+msgid "Resource name %s is already activated or in the process of activation"
+msgstr "リソース名 %s はすでにアクティブ化されているか、アクティブ化プロセス中です。"
+
+#: eon/api/v1/managed_entity.py:366
+#, python-format
+msgid "Found valid imported resource %s"
+msgstr "有効なインポートされたリソース %s が見つかりました"
+
+#: eon/api/v1/managed_entity.py:369
+#, python-format
+msgid "properties for the cluster: %s"
+msgstr "クラスターのプロパティ:%s"
+
+#: eon/api/v1/managed_entity.py:376
+#, python-format
+msgid "DC for resource %s is %s"
+msgstr "リソース %s のDCは %s です"
+
+#: eon/api/v1/managed_entity.py:394
+#, python-format
+msgid "Switch is not configured for the cluster %s in datacenter %s"
+msgstr "クラスター %s (データセンター %s) のスイッチは構成されていません"
+
+#: eon/api/v1/managed_entity.py:407
+#, python-format
+msgid "cluster data = %s"
+msgstr "クラスターデータ = %s"
+
+#: eon/api/v1/managed_entity.py:418
+#, python-format
+msgid ""
+"Switch %s has configuration errors for the cluster %s in datacenter %s. "
+"Errors = %s"
+msgstr ""
+"スイッチ %s (クラスター %s  - データセンター %s) に構成エラーがあります。 "
+"エラー = %s"
+
+#: eon/api/v1/managed_entity.py:452
+#, python-format
+msgid " Resource entity details: %s "
+msgstr " リソースエンティティ詳細: %s "
+
+#: eon/api/v1/managed_entity.py:490
+#, python-format
+msgid "Unable to activate the cluster %s Got the error : %s"
+msgstr "クラスター %s をアクティブ化できません。受け取ったエラー: %s"
+
+#: eon/api/v1/managed_entity.py:499
+#, python-format
+msgid "remove_resource %s %s %s"
+msgstr "remove_resource %s %s %s"
+
+#: eon/api/v1/managed_entity.py:525
+#, python-format
+msgid "Removed resource %s and sending response %s"
+msgstr "削除されたリソース %s および応答 %s を送信しています"
+
+#: eon/api/v1/managed_entity.py:528
+#, python-format
+msgid "Cannot remove resource (%s) in since it is not imported."
+msgstr "インポートされていないため、リソース (%s) を削除できません。"
+
+#: eon/api/v1/managed_entity.py:539
+#, python-format
+msgid "Un-Registering resource id: %s"
+msgstr "登録されていないリソースID:%s"
+
+#: eon/api/v1/managed_entity.py:581
+#, python-format
+msgid "Successfully unregistered resource [%s]"
+msgstr "リソース [%s] は正常に登録解除されました"
+
+#: eon/api/v1/managed_entity.py:588
+#, python-format
+msgid "Unable to unregister resource %sGot error: %s"
+msgstr "リソース %s を登録解除できません。受け取ったエラー: %s"
+
+#: eon/api/v1/managed_entity.py:609
+msgid "Successfully destroyed resource_entity"
+msgstr "resource_entityは正常に破棄されました"
+
+#: eon/api/v1/managed_entity.py:613
+#, python-format
+msgid "Failed to delete vCenter. Got error: %(e)s"
+msgstr "vCenterの削除に失敗しました。受け取ったエラー: %(e)s"
+
+#: eon/api/v1/managed_entity.py:661
+msgid "ManagedEntitySerializer"
+msgstr "管理エンティティシリアライザー"
+
+#: eon/api/v1/vcenter.py:124
+msgid "Fetching list of all registered vcenters"
+msgstr "すべての登録済みvCenterのリストをフェッチ中です"
+
+#: eon/api/v1/vcenter.py:128
+#, python-format
+msgid "Error while listing the vCenters : %s"
+msgstr "vCenterをリスト中にエラーが発生しました: %s"
+
+#: eon/api/v1/vcenter.py:167
+#, python-format
+msgid "Unable to list the details of vCenter,Got error %s"
+msgstr "vCenterの詳細をリストできません。受け取ったエラー: %s"
+
+#: eon/api/v1/vcenter.py:232
+#, python-format
+msgid "Unable to display the vcenter details.got the error : %s"
+msgstr "vCenter詳細を表示できません。受け取ったエラー: %s"
+
+#: eon/api/v1/vcenter.py:238
+#, python-format
+msgid "Details of vcenter:  %s has been returned"
+msgstr "vCetnerの詳細: %s が返されました"
+
+#: eon/api/v1/vcenter.py:289
+msgid "ip_address"
+msgstr "ip_address"
+
+#: eon/api/v1/vcenter.py:295
+#, python-format
+msgid "Could not retrieve vCenter %s"
+msgstr "vCenter %sが取得できませんでした"
+
+#: eon/api/v1/vcenter.py:300
+#, python-format
+msgid ""
+"Registration of vCenter failed.\n"
+"This could be due to invalid credentials or the vCenter server %s is unreachable.ip_address"
+msgstr ""
+"vCenterの登録が失敗しました。\n"
+"これは原因として無効な認証情報またはvCenterサーバー %s がunreachable.ip_addressである可能性があります。"
+
+#: eon/api/v1/vcenter.py:313
+#, python-format
+msgid "vCenter with id [%s] does not exist"
+msgstr "ID [%s] のvCenterは存在しません"
+
+#: eon/api/v1/vcenter.py:316
+#, python-format
+msgid "vCenter with id (%s) does not exist"
+msgstr "ID (%s) のvCenterは存在しません"
+
+#: eon/api/v1/vcenter.py:322
+#, python-format
+msgid "Check vCenter connectivity since IP has changed old IP = %s new IP = %s"
+msgstr "IPが変更されたため、vCenterの接続性を確認してください。古いIP = %s 新しいIP = %s"
+
+#: eon/api/v1/vcenter.py:344
+#: eon/api/v1/vcenter.py:595
+#, python-format
+msgid "Configured settings = %s"
+msgstr "設定構成中 = %s"
+
+#: eon/api/v1/vcenter.py:357
+#, python-format
+msgid ""
+"The datacenter %s has cluster(s) activated with different switch name (%s) and therefore the switch name cannot be modified"
+msgstr ""
+"データセンター %s は別のスイッチ名 (%s) でアクティブ化されたクラスターを持っています。そのため、スイッチ名は変更できません。"
+
+#: eon/api/v1/vcenter.py:371
+#, python-format
+msgid "Fail to delete, there are active Resource(s) associated to vCenter (ID %s)"
+msgstr "削除に失敗しました。vCenter(ID %s)に関連付けられたアクティブリソースが存在します"
+
+#: eon/api/v1/vcenter.py:376
+#, python-format
+msgid "Could not find vCenter %s %s"
+msgstr "vCenter %s %s を見つけることができませんでした"
+
+#: eon/api/v1/vcenter.py:438
+#, python-format
+msgid "vShield IP %s is invalid for vCenter %s "
+msgstr "vShield IP %s (vCenter %s) が無効です "
+
+#: eon/api/v1/vcenter.py:441
+#, python-format
+msgid "Error validating vShield credentials : %s"
+msgstr "vShield認証情報を検証中にエラーが発生しました: %s"
+
+#: eon/api/v1/vcenter.py:453
+#, python-format
+msgid "The list of proxy associated to the vCenter %s"
+msgstr "vCenter %s に関連付けられたプロキシのリスト"
+
+#: eon/api/v1/vcenter.py:469
+#, python-format
+msgid "Fetch all resources associated to ESX-Proxy(ID: %s)"
+msgstr "ESXプロキシ(ID: %s) に関連付けられたすべてのリソースをフェッチ"
+
+#: eon/api/v1/vcenter.py:478
+#, python-format
+msgid "Returning...Resource-Name: %s, Resource-Path: %s"
+msgstr "応答...リソース名: %s、リソースパス: %s"
+
+#: eon/api/v1/vcenter.py:503
+#, python-format
+msgid "Registering vcenter, context: %s"
+msgstr "vCenterの登録中、コンテキスト:%s"
+
+#: eon/api/v1/vcenter.py:508
+#, python-format
+msgid "Required attributes %s"
+msgstr "属性 %s は必須です"
+
+#: eon/api/v1/vcenter.py:521
+msgid "All vShield credentials must be specified"
+msgstr "すべてのvShield認証情報が指定されなければなりません"
+
+#: eon/api/v1/vcenter.py:544
+#, python-format
+msgid "Successfully added the vcenter %s"
+msgstr "vCenter %s は正常に追加されました"
+
+#: eon/api/v1/vcenter.py:552
+msgid "vCenter with identifier already exists!"
+msgstr "識別子を持つvCenterはすでに存在します!"
+
+#: eon/api/v1/vcenter.py:556
+#, python-format
+msgid "Unable to display the vcenter details:got the error : %s"
+msgstr "vCenter詳細を表示できません。受け取ったエラー: %s"
+
+#: eon/api/v1/vcenter.py:571
+#, python-format
+msgid "Updating vcenter, context: %s"
+msgstr "vCenterのアップデート中、コンテキスト:%s"
+
+#: eon/api/v1/vcenter.py:574
+#, python-format
+msgid "vCenter-Data: name: %s, username: %s, ip_address: %s, port: %s"
+msgstr "vCenterデータ: 名前:%s、ユーザー名:%s、IPアドレス:%s、ポート:%s"
+
+#: eon/api/v1/vcenter.py:607
+#, python-format
+msgid "Reconfigured switch settings = %s"
+msgstr "再構成されたスイッチ設定 = %s"
+
+#: eon/api/v1/vcenter.py:612
+#, python-format
+msgid "Updating settings = %s"
+msgstr "設定のアップデート中 = %s"
+
+#: eon/api/v1/vcenter.py:619
+msgid "Successfully updated vcenter settings"
+msgstr "vCenter設定は正常にアップデートされました"
+
+#: eon/api/v1/vcenter.py:624
+#, python-format
+msgid "Response for update vCenter %s"
+msgstr "vCenter %s アップデートの応答"
+
+#: eon/api/v1/vcenter.py:628
+#, python-format
+msgid "Failed to update vCenter. Got error: %s"
+msgstr "vCenterのアップデートに失敗しました。受け取ったエラー: %s"
+
+#: eon/api/v1/vcenter.py:647
+#, python-format
+msgid "Unregister vcenter id: %s"
+msgstr "登録されていないvCenter ID:%s"
+
+#: eon/api/v1/vcenter.py:654
+msgid "Successfully deleted vcenter"
+msgstr "vCenterは正常に削除されました"
+
+#: eon/api/v1/vcenter.py:658
+#, python-format
+msgid "Failed to delete vCenter. Got error: %s"
+msgstr "vCenterの削除に失敗しました。受け取ったエラー: %s"
+
+#: eon/common/config.py:23
+msgid ""
+"Partial name of a pipeline in your paste configuration file with the service name removed. For example, if your paste section name is [pipeline:isc-api-keystone] use the value \"keystone\""
+msgstr ""
+"サービス名を持ったペースト構成ファイル内のパイプラインの不完全な名前は削除されました。例えば、ペーストセクション名が値 \"keystone\" を使用する[pipeline:isc-api-keystone]の場合です。"
+
+#: eon/common/config.py:29
+msgid "Name of the paste configuration file."
+msgstr "ペースト構成ファイルの名前。"
+
+#: eon/common/config.py:33
+msgid "Python module path of data access API"
+msgstr "データアクセスAPIのPythonモジュールパス"
+
+#: eon/common/config.py:35
+msgid ""
+"Default value for the number of items returned by a request if not specified explicitly in the request"
+msgstr ""
+"リクエスト内で明確に指定されていない場合、リクエストによって返されるアイテム数のデフォルト値。"
+
+#: eon/common/config.py:38
+msgid "Maximum permissible number of items that could be returned by a request"
+msgstr "リクエストによって返されるアイテムの許可される最大数"
+
+#: eon/common/config.py:41
+msgid "Deploy the v1 OpenStack Images API. "
+msgstr "v1 OpenStackイメージAPIの展開。 "
+
+#: eon/common/config.py:43
+msgid "The hostname/IP of the pydev process listening for debug connections"
+msgstr "デバッグ接続をリスンしているpydevプロセスのホスト名/IP"
+
+#: eon/common/config.py:46
+msgid "The port on which a pydev process is listening for connections."
+msgstr "pydevプロセスが接続をリスンしているポート。"
+
+#: eon/common/config.py:49
+msgid ""
+"Key used for encrypting sensitive metadata while talking to the registry or database."
+msgstr ""
+"レジストリまたはデータベースとの通信中、センシティブなメタデータの暗号化に使用されるキー"
+
+#: eon/common/config.py:111
+msgid "Invalid syslog facility"
+msgstr "無効なsyslogファシリティです"
+
+#: eon/common/config.py:176
+#, python-format
+msgid "Loading %(app_name)s from %(conf_file)s"
+msgstr "%(app_name)s を %(conf_file)s からロード中です"
+
+#: eon/common/config.py:187
+#, python-format
+msgid ""
+"Unable to load %(app_name)s from configuration file %(conf_file)s.\n"
+"Got: %(e)r"
+msgstr ""
+"%(app_name)s を構成ファイル %(conf_file)s からロードできません。\n"
+"受け取ったエラー: %(e)r"
+
+#: eon/common/exception.py:25
+msgid "An unknown exception occurred"
+msgstr "不明な例外が発生しました"
+
+#: eon/common/exception.py:43
+msgid "Missing required argument."
+msgstr "必要な引数が見つかりません。"
+
+#: eon/common/exception.py:47
+#, python-format
+msgid "Missing required credential: %(required)s"
+msgstr "必要な認証情報がみつかりません:%(required)s"
+
+#: eon/common/exception.py:51
+#, python-format
+msgid ""
+"Incorrect auth strategy, expected \"%(expected)s\" but received \"%(received)s\""
+msgstr ""
+"認証ストラテジが正しくありません。\"%(expected)s\" が予想されましたが、\"%(received)s\" を受け取りました。"
+
+#: eon/common/exception.py:56
+msgid "An object with the specified identifier was not found."
+msgstr "指定された識別子を持つオブジェクトが見つかりませんでした。"
+
+#: eon/common/exception.py:60
+#, python-format
+msgid "Unknown scheme '%(scheme)s' found in URI"
+msgstr "URIで不明なスキーマ '%(scheme)s' が見つかりました"
+
+#: eon/common/exception.py:64
+msgid "The Store URI was malformed."
+msgstr "ストアURIはフォームが正しくありません。"
+
+#: eon/common/exception.py:68
+msgid "An object with the same identifier already exists."
+msgstr "同じ識別子を持つオブジェクトがすでに存在します。"
+
+#: eon/common/exception.py:72
+#, python-format
+msgid "Connect error/bad request to Auth service at URL %(url)s."
+msgstr "URL %(url)s で認証サービスへの接続エラー/バッドリクエストが発生しました。"
+
+#: eon/common/exception.py:76
+#, python-format
+msgid "Auth service at URL %(url)s not found."
+msgstr "URL %(url)s で認証サービスが見つかりません。"
+
+#: eon/common/exception.py:80
+msgid "Authorization failed."
+msgstr "認証は失敗しました。"
+
+#: eon/common/exception.py:84
+msgid "You are not authenticated."
+msgstr "認証されていません。"
+
+#: eon/common/exception.py:88
+#: eon/common/exception.py:93
+msgid "You are not authorized to complete this action."
+msgstr "このアクションを完了するための認証が行われていません。"
+
+#: eon/common/exception.py:97
+msgid "Data supplied was not valid."
+msgstr "提供されたデータが無効でした。"
+
+#: eon/common/exception.py:101
+msgid "Sort key supplied was not valid."
+msgstr "提供されたソートキーが無効でした。"
+
+#: eon/common/exception.py:105
+msgid "Unable to filter using the specified range."
+msgstr "指定された範囲を使用してフィルターできません。"
+
+#: eon/common/exception.py:109
+#, python-format
+msgid "Attribute '%(property)s' is read-only."
+msgstr "属性 '%(property)s' は読み取り専用です。"
+
+#: eon/common/exception.py:113
+#, python-format
+msgid "Attribute '%(property)s' is reserved."
+msgstr "属性 '%(property)s' は予約されています。"
+
+#: eon/common/exception.py:117
+#, python-format
+msgid "Redirecting to %(uri)s for authorization."
+msgstr "認証のため %(uri)s へリダイレクト中です。"
+
+#: eon/common/exception.py:121
+msgid "There was an error migrating the database."
+msgstr "データベースの移行中にエラーが発生しました。"
+
+#: eon/common/exception.py:125
+msgid "There was an error connecting to a server"
+msgstr "サーバーに接続中にエラーが発生しました。"
+
+#: eon/common/exception.py:129
+msgid "There was an error configuring the client."
+msgstr "クライアントの構成中にエラーが発生しました。"
+
+#: eon/common/exception.py:133
+#, python-format
+msgid ""
+"The request returned a 302 Multiple Choices. This generally means that you have not included a version indicator in a request URI.\n"
+"\n"
+"The body of response returned:\n"
+"%(body)s"
+msgstr ""
+"リクエストは302 Multiple Choicesを返しました。これは一般的に、リクエストURI内にバージョンインジケーターが含まれていなかったことを意味します。\n"
+"\n"
+"返された応答のボディ: \n"
+"%(body)s"
+
+#: eon/common/exception.py:139
+#, python-format
+msgid ""
+"The request returned a 413 Request Entity Too Large. This generally means that rate limiting or a quota threshold was breached.\n"
+"\n"
+"The response body:\n"
+"%(body)s"
+msgstr ""
+"リクエストは413 Request Entity Too Largeを返しました。これは一般的に、範囲制限またはクォータしきい値が破られたことを意味します。\n"
+"\n"
+"応答のボディ: \n"
+"%(body)s"
+
+#: eon/common/exception.py:150
+msgid ""
+"The request returned 503 Service Unavilable. This generally occurs on service overload or other transient outage."
+msgstr ""
+"リクエストは503 Service Unavailableを返しました。これは一般的に、サーバーが過負荷またはその他の一時的な停止で発生します。"
+
+#: eon/common/exception.py:161
+msgid "The request returned 500 Internal Server Error."
+msgstr "リクエストは500 Internal Server Errorを返しました。"
+
+#: eon/common/exception.py:165
+#, python-format
+msgid ""
+"The request returned an unexpected status: %(status)s.\n"
+"\n"
+"The response body:\n"
+"%(body)s"
+msgstr ""
+"リクエストは予期しないステータスを返しました:%(status)s。\n"
+"\n"
+"応答のボディ: \n"
+"%(body)s"
+
+#: eon/common/exception.py:170
+#, python-format
+msgid "Invalid content type %(content_type)s"
+msgstr "コンテンツタイプ %(content_type)s が無効です"
+
+#: eon/common/exception.py:174
+#, python-format
+msgid "Registry was not configured correctly on API server. Reason: %(reason)s"
+msgstr "APIサーバー上でレジストリが正しく構成されていませんでした。理由:%(reason)s"
+
+#: eon/common/exception.py:179
+#, python-format
+msgid "Store %(store_name)s could not be configured correctly. Reason: %(reason)s"
+msgstr "ストア %(store_name)s は正しく構成できませんでした。理由:%(reason)s"
+
+#: eon/common/exception.py:184
+#, python-format
+msgid ""
+"Driver %(driver_name)s could not be configured correctly. Reason: %(reason)s"
+msgstr ""
+"ドライバー %(driver_name)s は正しく構成できませんでした。理由:%(reason)s"
+
+#: eon/common/exception.py:189
+#, python-format
+msgid "Maximum redirects (%(redirects)s) was exceeded."
+msgstr "最大リダイレクト (%(redirects)s) を超えました。"
+
+#: eon/common/exception.py:193
+msgid "Received invalid HTTP redirect."
+msgstr "無効なHTTPリダイレクトを受け取りました。"
+
+#: eon/common/exception.py:197
+msgid "Response from Keystone does not contain a isc endpoint."
+msgstr "キーストーンからの応答がiscエンドポイントを含んでいません。"
+
+#: eon/common/exception.py:201
+#, python-format
+msgid "Server worker creation failed: %(reason)s."
+msgstr "サーバーワーカー作成が失敗しました: %(reason)s。"
+
+#: eon/common/exception.py:205
+#, python-format
+msgid "Unable to load schema: %(reason)s"
+msgstr "スキーマをロードできません: %(reason)s"
+
+#: eon/common/exception.py:209
+#, python-format
+msgid "Provided object does not match schema '%(schema)s': %(reason)s"
+msgstr "提供されたオブジェクトはスキーマ '%(schema)s' と一致しません: %(reason)s"
+
+#: eon/common/exception.py:214
+#, python-format
+msgid "Provided header feature is unsupported: %(feature)s"
+msgstr "提供されたヘッダー機能はサポートされません: %(feature)s"
+
+#: eon/common/exception.py:218
+#, python-format
+msgid "%(cls)s exception was raised in the last rpc call: %(val)s"
+msgstr "%(cls)s 例外が最後のrpcコールで発生しました: %(val)s"
+
+#: eon/common/exception.py:222
+#, python-format
+msgid "PAVMM Create VM REST api return error: %(status)s"
+msgstr "PAVMM作成VM REST APIリターンエラー: %(status)s"
+
+#: eon/common/exception.py:226
+#, python-format
+msgid "PAVMM Start VM REST api return error: %(status)s"
+msgstr "PAVMM開始VM REST APIリターンエラー: %(status)s"
+
+#: eon/common/exception.py:229
+#, python-format
+msgid "PAVMM Delete VM REST api return error: %(status)s"
+msgstr "PAVMM削除VM REST APIリターンエラー: %(status)s"
+
+#: eon/common/exception.py:232
+#, python-format
+msgid "Nova compute service fail to start error: %(status)s"
+msgstr "Novaコンピュートノードの開始に失敗しました。エラー: %(status)s"
+
+#: eon/common/jsonutils.py:84
+#, python-format
+msgid "Max serialization depth exceeded on object: %d %s"
+msgstr "最大シリアライゼーション深さをオブジェクトで超えました:%d %s"
+
+#: eon/common/log.py:110
+#, python-format
+msgid "Deprecated: %s"
+msgstr "非推奨:%s"
+
+#: eon/common/log.py:237
+#, python-format
+msgid "syslog facility must be one of: %s"
+msgstr "Syslogファシリティは次のひとつでなければなりません:%s"
+
+#: eon/common/log.py:425
+#, python-format
+msgid "Fatal call to deprecated config: %(msg)s"
+msgstr "非推奨構成の致命的なコール: %(msg)s"
+
+#: eon/common/rpc.py:99
+msgid "Request must be a list of commands"
+msgstr "リクエストはコマンドのリストでなければなりません"
+
+#: eon/common/rpc.py:104
+#, python-format
+msgid "Bad Command: %s"
+msgstr "誤ったコマンド:%s"
+
+#: eon/common/rpc.py:111
+#, python-format
+msgid "Wrong command structure: %s"
+msgstr "間違ったコマンド構造:%s"
+
+#: eon/common/rpc.py:120
+msgid "Command not found"
+msgstr "コマンドが見つかりません"
+
+#: eon/common/rpc.py:142
+#, python-format
+msgid ""
+"RPC Call Error: %(val)s\n"
+"%(tb)s"
+msgstr ""
+"RPCコールエラー:%(val)s\n"
+"%(tb)s"
+
+#: eon/common/utils.py:51
+msgid "Read-only access"
+msgstr "読み取り専用アクセス"
+
+#: eon/common/utils.py:95
+#, python-format
+msgid "Invalid backend: %s"
+msgstr "無効なバックエンド:%s"
+
+#: eon/common/utils.py:151
+msgid "Token is not specified or is not valid"
+msgstr "トークンが指定されていないか、無効です。"
+
+#: eon/common/utils.py:156
+msgid "The authorization key is not present"
+msgstr "認証キーが存在しません"
+
+#: eon/common/utils.py:160
+msgid "Authorization token is empty or not present"
+msgstr "認証トークンが空か、存在しません。"
+
+#: eon/common/utils.py:169
+#, python-format
+msgid "Authorization check response is %s"
+msgstr "認証チェック応答は %s です"
+
+#: eon/common/utils.py:170
+#, python-format
+msgid "Authorization check componentID is %s"
+msgstr "認証チェックコンポーネントIDは %s です"
+
+#: eon/common/wsgi.py:37
+msgid ""
+"Address to bind the server.  Useful when selecting a particular network interface."
+msgstr ""
+"サーバーをバインドするためのアドレス。特定のネットワークインターフェースを選択する場合に、役立ちます。"
+
+#: eon/common/wsgi.py:40
+msgid "The port on which the server will listen."
+msgstr "サーバーがリスンするポート。"
+
+#: eon/common/wsgi.py:45
+msgid "The backlog value that will be used when creating the TCP listener socket."
+msgstr "TCPリスナーソケットを作成する場合に使用されるバックログ値。"
+
+#: eon/common/wsgi.py:48
+msgid ""
+"The value for the socket option TCP_KEEPIDLE.  This isthe time in seconds that the connection must be idle before TCP starts sending keepalive probes."
+msgstr ""
+"ソケットオプションTCP_KEEPIDLEの値。これはTCPがキープアライブ調査を送り始める前に、接続がアイドル状態でなければならない時間(秒)です。"
+
+#: eon/common/wsgi.py:51
+msgid "CA certificate file to use to verify connecting clients."
+msgstr "クライアント接続の確認に使用されるCA証明書ファイル。"
+
+#: eon/common/wsgi.py:53
+msgid "Certificate file to use when starting API server securely."
+msgstr "APIサーバーを安全に開始する場合に使用される証明書ファイル。"
+
+#: eon/common/wsgi.py:55
+msgid "Private key file to use when starting API server securely."
+msgstr "APIサーバーを安全に開始する場合に使用される秘密キーファイル"
+
+#: eon/common/wsgi.py:60
+msgid ""
+"The number of child process workers that will be created to service API requests."
+msgstr ""
+"APIリクエストのサービスに作成される子プロセスワーカー数。"
+
+#: eon/common/wsgi.py:113
+msgid ""
+"When running server in SSL mode, you must specify both a cert_file and key_file option value in your configuration file"
+msgstr ""
+"サーバーがSSLモードで動作中の場合、cert_fileおよびkey_fileオプションの値の両方を構成ファイルで指定しなければなりません"
+
+#: eon/common/wsgi.py:151
+#, python-format
+msgid "Could not bind to %s:%s after trying for 30 seconds"
+msgstr "30秒試みた後に%s:%s にバインドできませんでした"
+
+#: eon/common/wsgi.py:223
+#, python-format
+msgid "Starting %d workers"
+msgstr "%d ワーカーを開始しています"
+
+#: eon/common/wsgi.py:238
+#, python-format
+msgid "Removing dead child %s"
+msgstr "デッドチャイルド %s を削除しています"
+
+#: eon/common/wsgi.py:241
+#, python-format
+msgid "Not respawning child %d, cannot recover from termination"
+msgstr "チャイルド %s を再生成しないと、終了から回復できません"
+
+#: eon/common/wsgi.py:245
+msgid "All workers have terminated. Exiting"
+msgstr "すべてのワーカーは終了しました。終了中"
+
+#: eon/common/wsgi.py:253
+msgid "Caught keyboard interrupt. Exiting."
+msgstr "キーボード割り込みを受け取りました。終了中です。"
+
+#: eon/common/wsgi.py:257
+msgid "Exited"
+msgstr "終了しました"
+
+#: eon/common/wsgi.py:279
+#, python-format
+msgid "Child %d exiting normally"
+msgstr "チャイルド %s 正常に終了中です"
+
+#: eon/common/wsgi.py:284
+#, python-format
+msgid "Started child %s"
+msgstr "チャイルド %s を開始しました"
+
+#: eon/common/wsgi.py:297
+msgid "eventlet 'poll' hub is not available on this platform"
+msgstr "eventlet 'poll'ハブはこのプラットフォームで利用できません"
+
+#: eon/common/wsgi.py:312
+msgid "Starting single process server"
+msgstr "シングルプロセスサーバーを開始中です"
+
+#: eon/common/wsgi.py:507
+msgid "Malformed JSON in request body."
+msgstr "リクエストボディ内に不正な形式のJSONです。"
+
+#: eon/db/sqlalchemy/api.py:39
+msgid ""
+"Period in seconds after which SQLAlchemy should reestablish its connection to the database."
+msgstr ""
+"SQLAlchemyがデータベースとの接続を再確立しなければならない期間(秒)。"
+
+#: eon/db/sqlalchemy/api.py:42
+msgid "The number of times to retry a connection to the SQLserver."
+msgstr "SQLサーバーへの接続を再試行する回数。"
+
+#: eon/db/sqlalchemy/api.py:45
+msgid ""
+"The amount of time to wait (in seconds) before attempting to retry the SQL connection."
+msgstr ""
+"SQL接続の再試行を試みるまでに待機する時間(秒)。"
+
+#: eon/db/sqlalchemy/api.py:48
+msgid "A boolean that determines if the database will be automatically created."
+msgstr "データベースが自動的に作成されるかどうかを決定するブーリアン。"
+
+#: eon/db/sqlalchemy/api.py:131
+#, python-format
+msgid ""
+"Error configuring registry database with supplied sql_connection. Got error: %s"
+msgstr ""
+"提供されたSQL接続でレジストリデーターベースを構成中にエラーが発生しました。受け取ったエラー: %s"
+
+#: eon/db/sqlalchemy/api.py:141
+msgid "auto-creating isc registry DB"
+msgstr "自動作成ISCレジストリDB"
+
+#: eon/db/sqlalchemy/api.py:149
+msgid "not auto-creating isc registry DB"
+msgstr "非自動作成ISCレジストリDB"
+
+#: eon/db/sqlalchemy/api.py:190
+#, python-format
+msgid "SQL connection failed. %d attempts left."
+msgstr "SQL接続が失敗しました。残り %d 試行。"
+
+#: eon/db/sqlalchemy/api.py:255
+#, python-format
+msgid "No vCenter found with ID %s"
+msgstr "ID %s のvCenterが見つかりませんでした"
+
+#: eon/db/sqlalchemy/api.py:622
+msgid "Id not in sort_keys; is sort_keys unique?"
+msgstr "IDがsort_keys内にありません。sort_keysはユニークですか?"
+
+#: eon/db/sqlalchemy/api.py:670
+msgid "Unknown sort direction, must be 'desc' or 'asc'"
+msgstr "不明なソート指示です。'desc'または'asc'でなければなりません"
+
+#: eon/db/sqlalchemy/api.py:747
+#, python-format
+msgid ""
+"get_properties_for_resource id = %s\n"
+" resource_id = %s\n"
+" name = %s\n"
+" type = %s\n"
+" value = %s"
+msgstr ""
+"get_properties_for_resource id = %s\n"
+" resource_id = %s\n"
+" name = %s\n"
+" type = %s\n"
+" value = %s"
+
+#: eon/db/sqlalchemy/api.py:777
+#, python-format
+msgid ""
+"get_property_for_resource id = %s\n"
+" resource_id = %s\n"
+" name = %s\n"
+" type = %s\n"
+" value = %s"
+msgstr ""
+"get_property_for_resource id = %s\n"
+" resource_id = %s\n"
+" name = %s\n"
+" type = %s\n"
+" value = %s"
+#: eon/db/sqlalchemy/api.py:796
+#, python-format
+msgid "update_resource_property %s %s %s %s"
+msgstr "update_resource_property %s %s %s %s"
+
+#: eon/db/sqlalchemy/api.py:832
+#, python-format
+msgid "update_resource_properties %s %s"
+msgstr "update_resource_properties %s %s"
+
+#: eon/db/sqlalchemy/api.py:841
+#, python-format
+msgid "update_resource_properties for %s %s returning %s"
+msgstr "update_resource_properties for %s %s returning %s"
+
+#: eon/db/sqlalchemy/api.py:847
+#, python-format
+msgid "Method _delete_resource_property %s %s"
+msgstr "Method _delete_resource_property %s %s"
+
+#: eon/db/sqlalchemy/api.py:856
+#, python-format
+msgid "Deleting property %s %s"
+msgstr "プロパティ %s %s を削除中です"
+
+#: eon/db/sqlalchemy/api.py:860
+#: eon/db/sqlalchemy/api.py:866
+#, python-format
+msgid "Error deleting property %s %s"
+msgstr "プロパティ %s %s を削除中にエラーが発生しました"
+
+#: eon/db/sqlalchemy/api.py:874
+#, python-format
+msgid "_delete_all_resource_properties %s"
+msgstr "_delete_all_resource_properties %s"
+
+#: eon/db/sqlalchemy/api.py:894
+#, python-format
+msgid "delete_resource_properties %s %s"
+msgstr "delete_resource_properties %s %s"
+
+#: eon/db/sqlalchemy/migration.py:35
+msgid "database is not under migration control"
+msgstr "データベースは、移行コントロール中でありません"
+
+#: eon/db/sqlalchemy/migration.py:49
+#, python-format
+msgid "Upgrading database to version %s"
+msgstr "バージョン %s へデータベースをアップグレード中です"
+
+#: eon/db/sqlalchemy/migration.py:63
+#, python-format
+msgid "Downgrading database to version %s"
+msgstr "バージョン %s へデータベースをダウングレード中です"
+
+#: eon/db/sqlalchemy/migration.py:76
+msgid "database is already under migration control"
+msgstr "データベースは、すでに移行コントロール中です"
+
+#: eon/db/sqlalchemy/migrate_repo/schema.py:75
+#, python-format
+msgid "creating table %(table)s"
+msgstr "テーブル %(table)s の作成中"
+
+#: eon/db/sqlalchemy/migrate_repo/schema.py:81
+#, python-format
+msgid "dropping table %(table)s"
+msgstr "テーブル %(table)s のドロップ中"
+
+#: eon/notifier/publisher.py:15
+msgid "The host name of the rabbitmq server"
+msgstr "RabbitMQサーバーのホスト名"
+
+#: eon/notifier/publisher.py:17
+msgid "The port on which the rabbitmq server is listening"
+msgstr "RabbitMQサーバーがリスンしているポート"
+
+#: eon/notifier/publisher.py:19
+msgid "A boolean value indicating if the selected rabbitmq server uses SSL."
+msgstr "選択されたRabbitMQサーバーがSSLを使用しているかどうかを示しているブーリアン値。"
+
+#: eon/notifier/publisher.py:22
+msgid "The user ID for authentication with rabbitmq."
+msgstr "RabbitMQの認証用ユーザーID。"
+
+#: eon/notifier/publisher.py:24
+msgid ""
+"The password that will be used for authentication with the rabbitmq server."
+msgstr ""
+"RabbitMQサーバーの認証で使用されるパスワード。"
+
+#: eon/notifier/publisher.py:27
+msgid "The virtual host used in the rabbitmq connection."
+msgstr "RabbitMQ接続内で使用される仮想ホスト。"
+
+#: eon/notifier/publisher.py:29
+msgid "Exchange name to use for connection when using rabbit strategy."
+msgstr "rabbitストラテジを使用した場合の接続に使用するExchange名"
+
+#: eon/notifier/publisher.py:32
+#: eon/notifier/publisher.py:50
+msgid "Topic to use for connection when using rabbit strategy."
+msgstr "rabbitストラテジを使用した場合の接続に使用するトピック。"
+
+#: eon/notifier/publisher.py:35
+msgid "The maximum number of times to attempt to connect to the AMQP server."
+msgstr "AMQPサーバーへの接続試行の最大回数。"
+
+#: eon/notifier/publisher.py:38
+msgid ""
+"This value multiplied by the number of connection attempts gives the amount of time in seconds to sleep between connection attempts to the AMQP server."
+msgstr ""
+"この値と接続試行数を掛けた値は、AMQPサーバーへの接続試行間のスリープ時間(秒)を与えます。"
+
+#: eon/notifier/publisher.py:42
+msgid ""
+"The maximum amount of time to wait between connection attempts.  The delay time will be the smaller of this value and the value of <rabbit_retry_backoff> * <the number of failed connection attempts so far>."
+msgstr ""
+"接続試行間で待機する最大時間。遅延時間はこの値と<rabbit_retry_backoff> * <これまでに失敗した接続試行数>の値のより小さなものになります。"
+
+#: eon/notifier/publisher.py:138
+#, python-format
+msgid "Reconnecting to rabbitmq...topic: %s"
+msgstr "RabbitMQに再接続中...topic:%s"
+
+
+#: eon/notifier/publisher.py:154
+#, python-format
+msgid "Attempting to publish message: %s"
+msgstr "メッセージ: %sを公開しようとしています"
+
+#: eon/notifier/publisher.py:161
+#, python-format
+msgid "Message : %s has been published"
+msgstr "メッセージ:%s は公開されました"
+
+#: eon/pavmm/utils.py:64
+#, python-format
+msgid "proc.stdout  :  %s"
+msgstr "proc.stdout  :%s"
+
+#: eon/pavmm/utils.py:136
+#, python-format
+msgid ""
+"Generating certificates & configurations... vCenter: %s, Resource-Name: %s, ESX-Proxy: %s, Routing-Key: %s, Host IP-Address: %s"
+msgstr ""
+"証明書および構成の生成中...vCenter:%s、Resource-Name:%s、ESXプロキシ:%s、Routing-Key:%s、ホスト IP-Address:%s"
+
+#: eon/pavmm/utils.py:143
+msgid "Got neutron_password !"
+msgstr "neutron_passwordを受け取りました !"
+
+#: eon/pavmm/utils.py:154
+msgid "Rabbitmq creds created"
+msgstr "Rabbitmq認証情報が作成されました"
+
+#: eon/pavmm/utils.py:168
+msgid "All require directories created"
+msgstr "すべての必要なディレクトリが作成されました"
+
+#: eon/pavmm/utils.py:185
+#, python-format
+msgid "Conf file written %s"
+msgstr "%s に書かれた構成ファイル"
+
+#: eon/pavmm/utils.py:187
+#, python-format
+msgid "Compute hostname: %s"
+msgstr "コンピュートホスト名:%s"
+
+#: eon/pavmm/utils.py:194
+msgid "RabbitMQ, Postgres certs created"
+msgstr "RabbitMQ、Postgresの証明書が作成されました"
+
+#: eon/pavmm/utils.py:202
+#, python-format
+msgid "Deleted: Rabbitmq_user = %s"
+msgstr "削除済み:Rabbitmq_user = %s"
+
+#: eon/pavmm/utils.py:212
+#, python-format
+msgid "Creating VM...ESX-Proxy: %s, Resource: %s, vCenter: %s"
+msgstr "VMの作成中...ESXプロキシ:%s、リソース:%s、vCenter:%s"
+
+#: eon/pavmm/cert_config/compute_node_certs.py:52
+#, python-format
+msgid "Writing temporary certificate...Compute node-name: %s, Config: %s"
+msgstr "テンポラリ証明書を書き込み中...コンピュートノード名:%s、構成:%s"
+
+#: eon/pavmm/cert_config/compute_node_certs.py:56
+#, python-format
+msgid "Compute Certs Location: %s "
+msgstr "コンピュートノード証明書ロケーション:%s "
+
+#: eon/pavmm/cert_config/compute_node_certs.py:114
+#, python-format
+msgid "unconfig cert for %s"
+msgstr "%s の構成されていない証明書"
+
+#: eon/pavmm/cert_config/postgresql_config.py:21
+msgid "Setting PostgresConfig server-side config"
+msgstr "PostgresConfig server-side configを設定中です"
+
+#: eon/pavmm/cert_config/postgresql_config.py:33
+msgid "Setting PostgresConfig client-side config"
+msgstr "PostgresConfig client-side configを設定中です"
+
+#: eon/pavmm/cert_config/rabbitmq_config.py:22
+msgid "Setting RabbitMQConfig server-side config"
+msgstr "RabbitMQConfig server-side configを設定中です"
+
+#: eon/pavmm/cert_config/rabbitmq_config.py:54
+msgid "Setting RabbitMQConfig client-side config"
+msgstr "RabbitMQConfig client-side configを設定中です"
+
+#: eon/vmware/vshield_client.py:28
+#, python-format
+msgid "REQ URL: %s\n"
+msgstr "REQ URL:%s\n"
+
+#: eon/vmware/vshield_client.py:38
+#, python-format
+msgid "REQ: %s\n"
+msgstr "REQ:%s\n"
+
+#: eon/vmware/vshield_client.py:40
+#, python-format
+msgid "REQ BODY: %s\n"
+msgstr "REQ BODY:%s\n"
+
+#: eon/vmware/vshield_client.py:59
+#, python-format
+msgid "Error in executing vshield api for rest url %s, Cause : %s"
+msgstr "REST URL %s でvShield APIを実行中にエラーが発生しました。原因:%s"
+
+#: eon/vmware/vshield_client.py:69
+#, python-format
+msgid "RESP:%s\n"
+msgstr "RESP:%s\n"
+
+#: eon/vmware/vshield_client.py:71
+#, python-format
+msgid "RESP BODY:%s\n"
+msgstr "RESP BODY:%s\n"
+
+#: eon/vmware/vshield_client.py:74
+msgid "Could not validate vshield credentials"
+msgstr "vShield認証情報を検証できませんでした"
+

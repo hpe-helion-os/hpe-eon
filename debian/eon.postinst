@@ -1,0 +1,28 @@
+#!/bin/bash
+mkdir -p /var/log/eon
+touch /var/log/eon/eon.log
+touch /var/log/eon/eon-manage.log
+chown -R eon:eon /var/log/eon/
+chmod 0700 /var/log/eon
+
+#create directory for eon service in var/run
+mkdir -p /var/run/eon
+chown -R eon:eon /var/run/eon
+
+# eon sql directory
+mkdir -p /var/cache/eon
+chown -R eon:eon /var/cache/eon
+
+# db_sync eon
+if grep -q esx_sql_connection /etc/eon/eon.conf
+then
+      su -s /bin/sh -c 'eon-manage db_sync' eon
+fi
+
+# update rc
+update-rc.d eon-api defaults
+update-rc.d eon-conductor defaults
+
+######### start eon service ############
+service eon-api start
+service eon-conductor start

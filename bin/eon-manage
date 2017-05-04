@@ -1,0 +1,152 @@
+#!/usr/bin/python
+#
+# (c) Copyright 2015-2017 Hewlett Packard Enterprise Development Company LP
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may
+# not use this file except in compliance with the License. You may obtain
+# a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations
+# under the License.
+#
+
+"""
+Eon Management Service Utility
+"""
+
+import os
+import sys
+
+from oslo_config import cfg
+
+import eon
+from eon.common import config
+from eon.db.sqlalchemy import api as db_api
+from eon.db.sqlalchemy import migration as db_migrate
+from eon.db.sqlalchemy import models
+from eon.openstack.common import log
+
+# If ../eon/__init__.py exists, add ../ to Python search path, so that
+# it will override what happens to be installed in /usr/(local/)lib/python...
+possible_topdir = os.path.normpath(os.path.join(os.path.abspath(sys.argv[0]),
+                                   os.pardir,
+                                   os.pardir))
+if os.path.exists(os.path.join(possible_topdir, 'eon', '__init__.py')):
+    sys.path.insert(0, possible_topdir)
+
+CONF = cfg.CONF
+
+
+def do_db_version():
+    """Print database's current migration level"""
+    print db_migrate.version()
+
+
+def do_upgrade():
+    """Upgrade the database's migration level"""
+    db_migrate.upgrade(CONF.command.version)
+
+
+def do_downgrade():
+    """Downgrade the database's migration level"""
+    db_migrate.downgrade(CONF.command.version)
+
+
+def do_revision():
+    """Place a database under migration control"""
+    db_migrate.revision(CONF.command.message, CONF.command.autogenerate)
+
+
+def do_stamp():
+    """Downgrade the database's migration level"""
+    db_migrate.stamp(CONF.command.version)
+
+
+def do_db_sync():
+    """
+    Place a database under migration control and upgrade,
+    creating first if necessary.
+    """
+    version = db_migrate.version()
+    if version:
+        db_migrate.upgrade(CONF.command.version)
+    else:
+        models.register_models(db_api.get_engine())
+        db_migrate.stamp('head')
+        db_migrate.upgrade('head')
+
+
+def do_db_clean():
+    models.unregister_models(db_api.get_engine())
+
+
+def add_command_parsers(subparsers):
+    parser = subparsers.add_parser('db_version')
+    parser.set_defaults(func=do_db_version)
+
+    parser = subparsers.add_parser('upgrade')
+    parser.set_defaults(func=do_upgrade)
+    parser.add_argument('version', nargs='?')
+
+    parser = subparsers.add_parser('downgrade')
+    parser.set_defaults(func=do_downgrade)
+    parser.add_argument('version')
+
+    parser = subparsers.add_parser('revision')
+    parser.add_argument('-m', '--message')
+    parser.add_argument('--autogenerate', action='store_true')
+    parser.set_defaults(func=do_revision)
+
+    parser = subparsers.add_parser('stamp')
+    parser.set_defaults(func=do_stamp)
+    parser.add_argument('version', nargs='?')
+
+    parser = subparsers.add_parser('db_sync')
+    parser.set_defaults(func=do_db_sync)
+    parser.add_argument('version', nargs='?')
+    parser.add_argument('current_version', nargs='?')
+
+    parser = subparsers.add_parser('db_clean')
+    parser.set_defaults(func=do_db_clean)
+
+command_opt = cfg.SubCommandOpt('command',
+                                title='Commands',
+                                help='Available commands',
+                                handler=add_command_parsers)
+
+
+def fail(returncode, e):
+    sys.stderr.write("ERROR: %s\n" % e)
+    sys.exit(returncode)
+
+
+def main():
+    CONF.register_cli_opt(command_opt)
+    try:
+        log.setup('eon')
+        eon.db.add_cli_options()
+
+        cfg_files = cfg.find_config_files(project='eon',
+                                          prog='eon-api')
+
+        config.parse_args(default_config_files=cfg_files,
+                          usage="%(prog)s [options] <cmd>")
+    except RuntimeError as e:
+        fail(2, e)
+
+    CONF.set_default('db_auto_create', True)
+    CONF.set_default('debug', True)
+    db_api.setup_db_env()
+
+    try:
+        CONF.command.func()
+    except Exception as e:
+        fail(1, e)
+
+if __name__ == '__main__':
+    main()

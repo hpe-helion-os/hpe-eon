@@ -1,0 +1,17 @@
+Source: eon
+Section: net
+Priority: extra
+Maintainer: hp-eon
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: http://review.hpcloud.net:29418/eon/
+
+Package: eon
+Architecture: all
+Depends: python-eon, rabbitmq-server
+Description: Eon service is the module which interacts with VMWare vCenter Server and collects the inventory of available Datacenters, Clusters and vSwitch / dvSwitch details required to deploy and configure an ESX Proxy Compute node.
+
+Package:  python-eon
+Architecture: all
+Depends: python-suds, alembic (>= 0.4.1), python-sqlalchemy (>= 0.7.8), python-amqplib (>= 0.3.3), python-anyjson, python-eventlet (>= 0.13.0), python-kombu (>= 2.4.8), python-lxml (>= 2.3), python-lockfile (>= 0.8), python-webob (>= 1.2.3), python-greenlet (>= 0.3.2), python-migrate, python-netaddr (>= 0.7.6), python-paramiko (>= 1.8.0), python-iso8601 (>= 0.1.8), python-neutronclient (>= 2.3.0), python-glanceclient (>= 0.9.0), python-keystoneclient (>= 0.4.1), python-stevedore (>= 0.12), websockify, python-oslo.config (>= 1.2.0), python-pecan (>= 0.2.0), python-six (>= 1.4.1), python-jsonpatch (>= 1.1), python-wsme (>= 0.5b6), python-jinja2, python-babel, debhelper (>= 9.0.0), python-setuptools, python-all (>= 2.6.6-3~), python-crypto,  python-pbr, python-pastedeploy (>=1.5.0), python-paste (>=1.7.4)
+Description: Eon service is the module which interacts with VMWare vCenter Server and collects the inventory of available Datacenters, Clusters and vSwitch / dvSwitch details required to deploy and configure an ESX Proxy Compute node.

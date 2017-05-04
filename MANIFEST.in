@@ -1,0 +1,14 @@
+graft etc
+graft eon/locale
+include eon/db/sqlalchemy/alembic.ini
+include eon/db/sqlalchemy/alembic/**
+include eon/db/sqlalchemy/alembic/versions/**
+include eon/deployer/**
+include babel.cfg
+include eon/template/*
+include eon/virt/hyperv/scripts/*
+exclude .gitignore
+exclude .gitreview
+
+global-exclude *.pyc
+

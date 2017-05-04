@@ -1,0 +1,6 @@
+#!/bin/bash
+# if the system group doesn't exist, create it
+/usr/bin/getent group eon >/dev/null || /usr/sbin/groupadd -r eon
+# if the user doesn't exist, create it
+/usr/bin/getent passwd eon >/dev/null || \
+/usr/sbin/useradd -r -g eon -G eon,nogroup -s /sbin/nologin -c "eon service User" eon

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Removes the eon directory in dist-packages
+rm -rf /usr/lib/python2.7/dist-packages/eon

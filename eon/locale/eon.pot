@@ -1,0 +1,1174 @@
+# Translations template for eon.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the eon project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: eon 8.0.0.20\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-03-25 22:18-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: eon/api/middleware/context.py:17
+msgid "Role used to identify an authenticated user as administrator."
+msgstr ""
+
+#: eon/api/middleware/context.py:84
+msgid "Invalid service catalog json."
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip.py:120
+#, python-format
+msgid "Unable to display the ip details.got the error : %s"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip.py:135
+msgid "Failed to delete. IP associated with esx proxy"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:29
+#, python-format
+msgid "'%s' contains whitespace"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:40
+#, python-format
+msgid "'%s' is not a valid IP address"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:54
+#, python-format
+msgid ""
+"Invalid input. '%(target_dict)s' must be a dictionary with keys: "
+"%(expected_keys)s"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:65
+#, python-format
+msgid ""
+"Validation of dictionary's keys failed.Expected keys: %(expected_keys)s "
+"Provided keys: %(provided_keys)s"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:79
+#, python-format
+msgid "Invalid data format for IP pool: '%s'"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:105
+#, python-format
+msgid "Invalid pool type : %(invalid_type)sExpected values : %(expected_values)s"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:110
+#, python-format
+msgid "Allocation pool must be empty for '%s' pool type"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:113
+#, python-format
+msgid "Allocation pool must have some value for '%s' pool type"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:220
+#, python-format
+msgid "Unable to display the ip pool details.got the error : %s"
+msgstr ""
+
+#: eon/api/v1/esx_proxy_ip_pool.py:265
+msgid "Enter appropriate IP range"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:45
+msgid "The maximum number of clusters supported per proxy vm"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:157
+#, python-format
+msgid "Unable to display the resource:got the error : %s"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:273
+#, python-format
+msgid "Unable to import the resource  (%(resource_name)s) Got error: %(error)s"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:330
+msgid "Virtual machines are already running on this cluster."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:332
+msgid ""
+"Virtual machine instances are running on the compute node. Manually "
+"remove these instances using the same tools that you used to manage the "
+"instances. Instances consume resources and may cause oversubscription "
+"when not managed by CloudSystem"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:395
+#, python-format
+msgid "Cluster '%s' does not have any hosts in connected state"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:397
+msgid "Add host to the cluster or reconnect the disconnected hosts"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:402
+#, python-format
+msgid ""
+"Could not determine vShield vApp status on hosts [%(hosts_without_vapp)s]"
+" in cluster '%(cluster_name)s'"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:407
+msgid "vShield vApp must be installed and running each host of the cluster"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:416
+#, python-format
+msgid "Could not determine if the cluster '%s' has hosts in connected state"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:438
+msgid "Another cluster activation is in progress."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:439
+msgid "Wait for the current activation task to complete and try again"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:460
+#, python-format
+msgid "Could not find Cluster %s"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:461
+msgid "Import the cluster"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:468
+#, python-format
+msgid "Cluster %s is already activated or in the process of activation"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:470
+msgid ""
+"Wait for the current cluster activation task to complete before retrying "
+"activation"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:497
+#, python-format
+msgid ""
+"The switch having access to cloud trunk is not configured for the cluster"
+" %(cluster_name)s in datacenter %(dc)s"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:503
+msgid "Configure the cloud trunk network switch."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:526
+#, python-format
+msgid ""
+"The cluster '%(cluster_name)s' configuration does not meet the "
+"requirements for activation. Errors = %(errors)s"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:531
+#, python-format
+msgid ""
+"The cluster must be DRS enabled, have hosts in connected state, at least "
+"one shared datastore and all hosts have access to the switch configured "
+"for data trunk networking. The switch '%(switch_name)s' is configured for"
+" the datacenter '%(dc)s'"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:584
+#, python-format
+msgid "Unable to activate the cluster %(cluster_name)s. Internal error occurred"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:667
+#, python-format
+msgid ""
+"Internal error occurred while updating the compute node state in DB. "
+"[Error=%s]"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:720 eon/api/v1/managed_entity.py:764
+#, python-format
+msgid "Unable to activate the cluster %(cluster_name)s Got the error : %(error)s"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:785
+msgid "The compute node is activated and cannot be deleted."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:787
+msgid "Deactivate the compute node and retry delete."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:812
+#, python-format
+msgid "Cannot remove resource (%s) in since it is not imported."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:828
+#, python-format
+msgid ""
+"Not deleting the proxy vm. Since there are active resource(s) associated "
+"to the proxy (%s)"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:839
+#, python-format
+msgid "Could not delete the compute proxy %s"
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:841
+#, python-format
+msgid "Delete the proxy vm %s if exists and try to activate again."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:914
+msgid "Another cluster deactivation is in progress."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:915
+msgid "Wait for the current deactivation task to complete and try again."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:1055
+msgid "The deactivation has been initiated."
+msgstr ""
+
+#: eon/api/v1/managed_entity.py:1062
+#, python-format
+msgid "Failed to deactivate cluster. Got error: %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:205
+#, python-format
+msgid "Error while listing the vCenters : %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:279
+#, python-format
+msgid "Unable to display the vcenter details.got the error : %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:331
+msgid "Registration/update of vCenter failed."
+msgstr ""
+
+#: eon/api/v1/vcenter.py:332
+msgid ""
+"Enter valid vCenter credentials and ensure vCenter is running and is "
+"reachable from the appliance"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:357
+#, python-format
+msgid ""
+"Failed to register vCenter. The vCenter IP Address (%s) could not be "
+"resolved."
+msgstr ""
+
+#: eon/api/v1/vcenter.py:370
+#, python-format
+msgid "Failed to retrieve data for vCenter %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:378
+#, python-format
+msgid "Failed to register vCenter. vCenter by ip_address (%s) already exists."
+msgstr ""
+
+#: eon/api/v1/vcenter.py:404
+msgid ""
+"There are cluster(s) activated and therefore the vShield credentials "
+"cannot be deleted"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:419 eon/api/v1/vcenter.py:780
+msgid "All vShield credentials must be specified"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:452
+#, python-format
+msgid "vCenter with id [%s] does not exist"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:461
+#, python-format
+msgid "Update of vCenter failed: vCenter ip_address (%s) could not be resolved."
+msgstr ""
+
+#: eon/api/v1/vcenter.py:472
+#, python-format
+msgid "Could not retrieve vCenter %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:482
+#, python-format
+msgid "Registration/update of vCenter failed: vCenter (%s) already exists."
+msgstr ""
+
+#: eon/api/v1/vcenter.py:537
+#, python-format
+msgid ""
+"The datacenter %(dc)s has cluster(s) activated with different switch name"
+" (%(switch_details)s) and therefore the switch name cannot be modified"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:553
+#, python-format
+msgid "There are activated/imported clusters(s) associated to the vCenter (ID %s)"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:621
+#, python-format
+msgid "Error validating vShield credentials : %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:622
+msgid "Enter valid credentials"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:629
+#, python-format
+msgid "vShield IP %(ip_address)s is invalid for vCenter %(vcenter_ip)s "
+msgstr ""
+
+#: eon/api/v1/vcenter.py:633
+msgid "Enter valid VShield IP address"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:830 eon/api/v1/vcenter.py:840
+#, python-format
+msgid "Registering of VCenter failed. Got error: '%s'"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:967 eon/api/v1/vcenter.py:976
+#, python-format
+msgid "Failed to update vCenter. Got error: %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:1027
+#, python-format
+msgid "Failed to unregister vCenter.Got error: %s"
+msgstr ""
+
+#: eon/api/v1/vcenter.py:1035
+#, python-format
+msgid "Failed to unregister vCenter. Got error: %s"
+msgstr ""
+
+#: eon/common/config.py:24
+msgid ""
+"Partial name of a pipeline in your paste configuration file with the "
+"service name removed. For example, if your paste section name is "
+"[pipeline:isc-api-keystone] use the value \"keystone\""
+msgstr ""
+
+#: eon/common/config.py:30
+msgid "Name of the paste configuration file."
+msgstr ""
+
+#: eon/common/config.py:34
+msgid "Python module path of data access API"
+msgstr ""
+
+#: eon/common/config.py:36
+msgid ""
+"Default value for the number of items returned by a request if not "
+"specified explicitly in the request"
+msgstr ""
+
+#: eon/common/config.py:39
+msgid "Maximum permissible number of items that could be returned by a request"
+msgstr ""
+
+#: eon/common/config.py:42
+msgid "Deploy the v1 OpenStack Images API. "
+msgstr ""
+
+#: eon/common/config.py:44
+msgid "The hostname/IP of the pydev process listening for debug connections"
+msgstr ""
+
+#: eon/common/config.py:47
+msgid "The port on which a pydev process is listening for connections."
+msgstr ""
+
+#: eon/common/config.py:50
+msgid ""
+"Key used for encrypting sensitive metadata while talking to the registry "
+"or database."
+msgstr ""
+
+#: eon/common/config.py:78
+#, python-format
+msgid "Unable to locate specified logging config file: %s"
+msgstr ""
+
+#: eon/common/config.py:96
+msgid "Invalid syslog facility"
+msgstr ""
+
+#: eon/common/config.py:134
+#, python-format
+msgid "Unable to locate paste config file for %s."
+msgstr ""
+
+#: eon/common/config.py:172
+#, python-format
+msgid ""
+"Unable to load %(app_name)s from configuration file %(conf_file)s.\n"
+"Got: %(e)r"
+msgstr ""
+
+#: eon/common/exception.py:25
+msgid "An unknown exception occurred"
+msgstr ""
+
+#: eon/common/exception.py:50
+msgid "Missing required argument."
+msgstr ""
+
+#: eon/common/exception.py:54
+#, python-format
+msgid "Missing required credential: %(required)s"
+msgstr ""
+
+#: eon/common/exception.py:58
+#, python-format
+msgid ""
+"Incorrect auth strategy, expected \"%(expected)s\" but received "
+"\"%(received)s\""
+msgstr ""
+
+#: eon/common/exception.py:63
+msgid "An object with the specified identifier was not found."
+msgstr ""
+
+#: eon/common/exception.py:67
+#, python-format
+msgid "Unknown scheme '%(scheme)s' found in URI"
+msgstr ""
+
+#: eon/common/exception.py:71
+msgid "The Store URI was malformed."
+msgstr ""
+
+#: eon/common/exception.py:75
+msgid "An object with the same identifier already exists."
+msgstr ""
+
+#: eon/common/exception.py:79
+#, python-format
+msgid "Connect error/bad request to Auth service at URL %(url)s."
+msgstr ""
+
+#: eon/common/exception.py:83
+#, python-format
+msgid "Auth service at URL %(url)s not found."
+msgstr ""
+
+#: eon/common/exception.py:87
+msgid "Authorization failed."
+msgstr ""
+
+#: eon/common/exception.py:91
+msgid "You are not authenticated."
+msgstr ""
+
+#: eon/common/exception.py:95 eon/common/exception.py:100
+msgid "You are not authorized to complete this action."
+msgstr ""
+
+#: eon/common/exception.py:104
+msgid "Data supplied was not valid."
+msgstr ""
+
+#: eon/common/exception.py:108
+msgid "Sort key supplied was not valid."
+msgstr ""
+
+#: eon/common/exception.py:112
+msgid "Unable to filter using the specified range."
+msgstr ""
+
+#: eon/common/exception.py:116
+#, python-format
+msgid "Attribute '%(property)s' is read-only."
+msgstr ""
+
+#: eon/common/exception.py:120
+#, python-format
+msgid "Attribute '%(property)s' is reserved."
+msgstr ""
+
+#: eon/common/exception.py:124
+#, python-format
+msgid "Redirecting to %(uri)s for authorization."
+msgstr ""
+
+#: eon/common/exception.py:128
+msgid "There was an error migrating the database."
+msgstr ""
+
+#: eon/common/exception.py:132
+msgid "There was an error connecting to a server"
+msgstr ""
+
+#: eon/common/exception.py:136
+msgid "There was an error configuring the client."
+msgstr ""
+
+#: eon/common/exception.py:140
+#, python-format
+msgid ""
+"The request returned a 302 Multiple Choices. This generally means that "
+"you have not included a version indicator in a request URI.\n"
+"\n"
+"The body of response returned:\n"
+"%(body)s"
+msgstr ""
+
+#: eon/common/exception.py:146
+#, python-format
+msgid ""
+"The request returned a 413 Request Entity Too Large. This generally means"
+" that rate limiting or a quota threshold was breached.\n"
+"\n"
+"The response body:\n"
+"%(body)s"
+msgstr ""
+
+#: eon/common/exception.py:157
+msgid ""
+"The request returned 503 Service Unavailable. This generally occurs on "
+"service overload or other transient outage."
+msgstr ""
+
+#: eon/common/exception.py:168
+msgid "The request returned 500 Internal Server Error."
+msgstr ""
+
+#: eon/common/exception.py:172
+#, python-format
+msgid ""
+"The request returned an unexpected status: %(status)s.\n"
+"\n"
+"The response body:\n"
+"%(body)s"
+msgstr ""
+
+#: eon/common/exception.py:177
+#, python-format
+msgid "Invalid content type %(content_type)s"
+msgstr ""
+
+#: eon/common/exception.py:181
+#, python-format
+msgid "Registry was not configured correctly on API server. Reason: %(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:186
+#, python-format
+msgid "Store %(store_name)s could not be configured correctly. Reason: %(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:191
+#, python-format
+msgid ""
+"Driver %(driver_name)s could not be configured correctly. Reason: "
+"%(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:196
+#, python-format
+msgid "Maximum redirects (%(redirects)s) was exceeded."
+msgstr ""
+
+#: eon/common/exception.py:200 eon/pavmm/utils.py:442
+msgid "Error in generating the required certs for compute"
+msgstr ""
+
+#: eon/common/exception.py:204
+msgid "Received invalid HTTP redirect."
+msgstr ""
+
+#: eon/common/exception.py:208
+msgid "Response from Keystone does not contain a isc endpoint."
+msgstr ""
+
+#: eon/common/exception.py:212
+#, python-format
+msgid "Server worker creation failed: %(reason)s."
+msgstr ""
+
+#: eon/common/exception.py:216
+#, python-format
+msgid "Unable to load schema: %(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:220
+#, python-format
+msgid "Provided object does not match schema '%(schema)s': %(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:225
+#, python-format
+msgid "Provided header feature is unsupported: %(feature)s"
+msgstr ""
+
+#: eon/common/exception.py:229
+#, python-format
+msgid "%(cls)s exception was raised in the last rpc call: %(val)s"
+msgstr ""
+
+#: eon/common/exception.py:233 eon/common/exception.py:237
+#, python-format
+msgid "%(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:246
+#, python-format
+msgid "Unable to store password: %(status)s"
+msgstr ""
+
+#: eon/common/exception.py:250
+#, python-format
+msgid "Unable to fetch password: %(status)s"
+msgstr ""
+
+#: eon/common/exception.py:259
+#, python-format
+msgid "The cluster could not be deactivated as a compute resource : %(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:264
+#, python-format
+msgid "The cluster activation Failed : %(reason)s"
+msgstr ""
+
+#: eon/common/exception.py:313
+msgid "Invalid Operation"
+msgstr ""
+
+#: eon/common/exception.py:322
+msgid "Failed to upgrade Proxy."
+msgstr ""
+
+#: eon/common/exception.py:331
+#, python-format
+msgid "Database error has occurred [%(reason)s]."
+msgstr ""
+
+#: eon/common/exception.py:335
+#, python-format
+msgid "Proxy VM has errors: %(reason)s"
+msgstr ""
+
+#: eon/common/log.py:88
+#, python-format
+msgid "Fatal call to deprecated config: %(msg)s"
+msgstr ""
+
+#: eon/common/messageutils.py:69
+msgid "Exception in . Retry                     counter:"
+msgstr ""
+
+#: eon/common/messageutils.py:78
+#, python-format
+msgid "Initiating status check on proxy %s"
+msgstr ""
+
+#: eon/common/utils.py:90
+msgid "Token is not specified or is not valid"
+msgstr ""
+
+#: eon/common/utils.py:145
+msgid "SDN controller is not up / agent services are not running Trying again..."
+msgstr ""
+
+#: eon/common/utils.py:180
+msgid "Checking the proxy vm status..."
+msgstr ""
+
+#: eon/common/utils.py:184
+#, python-format
+msgid "%s consumer is not responding"
+msgstr ""
+
+#: eon/common/utils.py:222 eon/common/utils.py:253
+msgid "Can not get token/tenant id for the REST API"
+msgstr ""
+
+#: eon/common/utils.py:229
+#, python-format
+msgid "Unable to do %s. The cluster could not be updated."
+msgstr ""
+
+#: eon/common/utils.py:241
+msgid "SDN agents are not running / not responding"
+msgstr ""
+
+#: eon/common/utils.py:245
+#, python-format
+msgid "The cluster %s has been successful."
+msgstr ""
+
+#: eon/common/utils.py:260
+#, python-format
+msgid "Unable to deactivate the cluster %s from the compute service."
+msgstr ""
+
+#: eon/common/utils.py:263
+#, python-format
+msgid "Cluster %s Successfully removed from the compute service"
+msgstr ""
+
+#: eon/common/utils.py:386
+#, python-format
+msgid "Checking the Rabbitmq server status %s"
+msgstr ""
+
+#: eon/common/utils.py:389
+msgid "Listing rabbitmq proxy users"
+msgstr ""
+
+#: eon/common/utils.py:392
+#, python-format
+msgid "The Rabbitmq server status %s"
+msgstr ""
+
+#: eon/common/utils.py:393
+#, python-format
+msgid "The rabbitmq proxy users %s"
+msgstr ""
+
+#: eon/common/utils.py:394
+#, python-format
+msgid "Listing the states of the nova services %s"
+msgstr ""
+
+#: eon/common/utils.py:397
+#, python-format
+msgid "Appliance-proxy state is improper. Got the exception%s"
+msgstr ""
+
+#: eon/common/utils.py:426
+#, python-format
+msgid ""
+"Error validating vShield App configuration on the hosts of the cluster. "
+"Error detail: %s"
+msgstr ""
+
+#: eon/common/utils.py:428
+msgid ""
+"Verify is the vShield manager is running and is accessible. vSheild "
+"manager is used to determine if vApp is running on the hosts of the "
+"cluster"
+msgstr ""
+
+#: eon/common/wsgi.py:39
+msgid ""
+"Address to bind the server.  Useful when selecting a particular network "
+"interface."
+msgstr ""
+
+#: eon/common/wsgi.py:42
+msgid "The port on which the server will listen."
+msgstr ""
+
+#: eon/common/wsgi.py:47
+msgid "The backlog value that will be used when creating the TCP listener socket."
+msgstr ""
+
+#: eon/common/wsgi.py:50
+msgid ""
+"The value for the socket option TCP_KEEPIDLE.  This isthe time in seconds"
+" that the connection must be idle before TCP starts sending keepalive "
+"probes."
+msgstr ""
+
+#: eon/common/wsgi.py:53
+msgid "CA certificate file to use to verify connecting clients."
+msgstr ""
+
+#: eon/common/wsgi.py:55
+msgid "Certificate file to use when starting API server securely."
+msgstr ""
+
+#: eon/common/wsgi.py:57
+msgid "Private key file to use when starting API server securely."
+msgstr ""
+
+#: eon/common/wsgi.py:62
+msgid ""
+"The number of child process workers that will be created to service API "
+"requests."
+msgstr ""
+
+#: eon/common/wsgi.py:164
+msgid "You must implement __call__"
+msgstr ""
+
+#: eon/common/wsgi.py:219
+#, python-format
+msgid "Loading %(app_name)s from %(conf_file)s"
+msgstr ""
+
+#: eon/common/wsgi.py:318
+msgid "Malformed JSON in request body."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:41
+msgid ""
+"Period in seconds after which SQLAlchemy should reestablish its "
+"connection to the database."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:44
+msgid "The number of times to retry a connection to the SQLserver."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:47
+msgid ""
+"The amount of time to wait (in seconds) before attempting to retry the "
+"SQL connection."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:50
+msgid "A boolean that determines if the database will be automatically created."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:144
+#, python-format
+msgid ""
+"Error configuring registry database with supplied sql_connection. Got "
+"error: %s"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:313 eon/tests/unit/db/simple/api.py:548
+#, python-format
+msgid "No vCenter found with ID %s"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:428 eon/tests/unit/db/simple/api.py:407
+msgid "IP is in use. Can't delete it"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:456 eon/tests/unit/db/simple/api.py:219
+#: eon/tests/unit/db/simple/api.py:225
+#, python-format
+msgid "No ESX Proxy IP found with ID %s"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:530
+#, python-format
+msgid "IP %s already exists!"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:591 eon/tests/unit/db/simple/api.py:312
+#: eon/tests/unit/db/simple/api.py:319
+#, python-format
+msgid "No ESX Proxy IP Pool found with ID %s"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:628 eon/tests/unit/db/simple/api.py:372
+msgid "Can't change pool type.IP already in use."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:655
+msgid "Unable to create ippool"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:672
+#, python-format
+msgid "IP %s assign to %s."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:680
+msgid "No IPs found."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:682
+msgid "No free IP."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:712
+#, python-format
+msgid "No IP assign to %s."
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:728 eon/db/sqlalchemy/api.py:763
+msgid "Resource-Entity ID already exists!"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:800 eon/tests/unit/db/simple/api.py:682
+#, python-format
+msgid "No Resource found with ID %s"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:869 eon/db/sqlalchemy/api.py:905
+msgid "ESX_PROXY ID already exists!"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:949
+#, python-format
+msgid "No Esx-Proxy found (ID %s)"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:976
+#, python-format
+msgid "No Esx-Proxy found with name %s "
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:1061
+#, python-format
+msgid "vCenter ID %s already exists!"
+msgstr ""
+
+#: eon/db/sqlalchemy/api.py:1175
+#, python-format
+msgid "Could not update property %s for resource %s"
+msgstr ""
+
+#: eon/db/sqlalchemy/migration.py:36
+msgid "database is not under migration control"
+msgstr ""
+
+#: eon/db/sqlalchemy/migration.py:76
+msgid "database is already under migration control"
+msgstr ""
+
+#: eon/pavmm/utils.py:123
+#, python-format
+msgid "Creating proxy: %s"
+msgstr ""
+
+#: eon/pavmm/utils.py:148
+#, python-format
+msgid "Starting the proxy: %s"
+msgstr ""
+
+#: eon/pavmm/utils.py:166
+#, python-format
+msgid "Deleting proxy %s:"
+msgstr ""
+
+#: eon/pavmm/utils.py:212
+#, python-format
+msgid "Generating certificates for Compute Proxy %s"
+msgstr ""
+
+#: eon/pavmm/utils.py:233
+msgid "IP address for Proxy Appliance not available."
+msgstr ""
+
+#: eon/pavmm/utils.py:234
+msgid "Set IPs (DHCP/Static) for vCenter Proxy Appliance"
+msgstr ""
+
+#: eon/pavmm/utils.py:350
+msgid "Failed to copy the certificates"
+msgstr ""
+
+#: eon/pavmm/utils.py:352
+#, python-format
+msgid "Generating certificates for Compute Proxy %s completed"
+msgstr ""
+
+#: eon/pavmm/utils.py:395
+#, python-format
+msgid "Deleting certificates for the VM Proxy %s"
+msgstr ""
+
+#: eon/pavmm/utils.py:463
+#, python-format
+msgid "Unable to create Compute Proxy Appliance. %s"
+msgstr ""
+
+#: eon/pavmm/utils.py:481
+#, python-format
+msgid "Failed to Power-ON the proxy Appliance. %s"
+msgstr ""
+
+#: eon/pavmm/utils.py:490
+#, python-format
+msgid "Starting Proxy VM %s upgrade.hostname"
+msgstr ""
+
+#: eon/pavmm/utils.py:491
+msgid "Waiting for the proxy to upgrade."
+msgstr ""
+
+#: eon/pavmm/utils.py:502
+#, python-format
+msgid "Proxy VM %s upgrade successfully completed.hostname"
+msgstr ""
+
+#: eon/pavmm/utils.py:507 eon/pavmm/utils.py:512
+#, python-format
+msgid "Failed to upgrade Proxy VM %shostname"
+msgstr ""
+
+#: eon/pavmm/utils.py:522
+msgid "Waiting for the nova compute service to start"
+msgstr ""
+
+#: eon/pavmm/utils.py:537
+msgid "Nova compute service has started sucessfully"
+msgstr ""
+
+#: eon/pavmm/utils.py:550
+msgid "Nova compute service failed to start"
+msgstr ""
+
+#: eon/pavmm/utils.py:551
+msgid ""
+"If DHCP is selected for vCenter proxy VM, ensure that DHCP service is "
+"running on the network. If static IP is selected, then ensure that the "
+"free IPs in the pool are not already in use."
+msgstr ""
+
+#: eon/tests/unit/db/simple/api.py:259
+#, python-format
+msgid "IP %s already exists!ipaddress"
+msgstr ""
+
+#: eon/tests/unit/vmware/fake_vmware_api.py:118
+#, python-format
+msgid "Property %(attr)s not set for the managed object %(name)s"
+msgstr ""
+
+#: eon/tests/unit/vmware/fake_vmware_api.py:408
+#, python-format
+msgid "Logging out a session that is invalid or already logged out: %s"
+msgstr ""
+
+#: eon/tests/unit/vmware/fake_vmware_api.py:425
+msgid "Session Invalid"
+msgstr ""
+
+#: eon/vmware/cluster_validate.py:77
+msgid "No shared datastore available in the cluster"
+msgstr ""
+
+#: eon/vmware/cluster_validate.py:87
+msgid "Cluster DRS not enabled"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:67
+#, python-format
+msgid "Exception occurred while monitoring updates on vCenter got the error : %s"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:198
+#, python-format
+msgid "Could not validate cluster configuration. Internal error: %s"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:247
+msgid "No switches configured on the host"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:267
+#, python-format
+msgid "Hosts %s in the cluster do not have vSwitch '%s'"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:324
+#, python-format
+msgid "Hosts %s in the cluster do not have access to the dvSwitch"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:334
+#, python-format
+msgid ""
+"The switch with name '%s' is configured as the data networking access "
+"switch for this datacenter and the hosts in the cluster are not connected"
+" to this switch"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:421
+#, python-format
+msgid "Update received on vCenter %s for MOR %s with property %s and type %s"
+msgstr ""
+
+#: eon/vmware/inventory_collector.py:439
+#, python-format
+msgid ""
+"Delete event received on vCenter %(vcenter) for MOR "
+"%(mor)vcenterip_address"
+msgstr ""
+
+#: eon/vmware/vim.py:121
+#, python-format
+msgid "Unable to validate session %s!"
+msgstr ""
+
+#: eon/vmware/vim_session.py:100
+#, python-format
+msgid "Could not find (%s) in VIM Object"
+msgstr ""
+
+#: eon/vmware/vim_session.py:115
+#, python-format
+msgid "Task : %s (%s) status: success"
+msgstr ""
+
+#: eon/vmware/vim_session.py:120
+#, python-format
+msgid "Task : %s (%s) status: error, cause: %s"
+msgstr ""
+
+#: eon/vmware/vim_util.py:61
+msgid "urllib2 error "
+msgstr ""
+
+#: eon/vmware/vim_util.py:67
+msgid "urllib2 error : "
+msgstr ""
+
+#: eon/vmware/vim_util.py:81
+msgid "Socket timeout"
+msgstr ""
+
+#: eon/vmware/vim_util.py:94
+msgid "Exception"
+msgstr ""
+
+#: eon/vmware/vim_util.py:105
+#, python-format
+msgid "Error(s) %s occurred in the call to RetrieveProperties"
+msgstr ""
+
+#: eon/vmware/vshield_client.py:73
+#, python-format
+msgid "Error in connecting to vShield manager %s"
+msgstr ""
+
+#: eon/vmware/vshield_client.py:76
+#, python-format
+msgid "An error occurred while executing vShield API: %s"
+msgstr ""
+
+#: eon/vmware/vshield_client.py:85
+msgid "Could not validate vShield credentials"
+msgstr ""
+

@@ -1,0 +1,40 @@
+# debian packaging
+dist/
+target/
+
+# pycharm project dir
+.idea/
+
+# pyc files
+*.pyc
+
+# egg-info files
+eon.egg-info/
+
+# virtualenv
+.venv/
+
+# coverage and nose tests
+.coverage
+.coveragerc
+.testrepository/
+.tox/
+cover/
+coverage.xml
+nosetests.xml
+covhtml/
+install_external_deps.log
+
+# pep8 and pylint
+pep8.txt
+pylint.txt
+
+#eclipse specific
+.project
+.pydevproject
+.settings
+
+# temporary files genetated during ut run
+build/
+eon/*.pem
+run_tests.log

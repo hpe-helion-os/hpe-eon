@@ -1,0 +1,13 @@
+#!/bin/bash
+rm -rf /var/log/eon
+
+# eon sql directory
+rm -rf /var/cache/eon
+
+# remove from rc
+update-rc.d -f  eon-api remove
+update-rc.d -f  eon-conductor remove
+
+rm -f /etc/init.d/eon-api
+rm -f /etc/init.d/eon-conductor
+

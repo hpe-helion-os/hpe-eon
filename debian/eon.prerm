@@ -1,0 +1,4 @@
+#!/bin/bash
+######### stop eon service ############
+service eon-api stop
+service eon-conductor stop

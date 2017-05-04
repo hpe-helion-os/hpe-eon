@@ -1,0 +1,136 @@
+{
+    # The documentation for all attributes below, their possible values and their significance
+    # in ESX HOS 4.0 deployment is available in the doc-link here:
+    # http://docs.hpcloud.com/#3.x/helion/installation/install_entryscale_esx_kvm_vsa_template_json.html
+
+    "switches": [
+        {
+            "type": "dvSwitch",
+            "name": "MGMT-DVS",
+            "physical_nics": "vmnic1",
+            "mtu": "1500"
+        },
+
+        {
+            "type": "dvSwitch",
+            "name": "TRUNK-DVS",
+            "physical_nics": "",
+            "mtu": "1500"
+        }
+    ],
+
+    "portGroups": [
+        {
+            "name": "ESX-CONF",
+            "vlan": "33",
+            "vlan_type": "trunk",
+            "switchName": "MGMT-DVS",
+            "nic_teaming": {
+                "network_failover_detection": "1",
+                "notify_switches": "yes",
+                "load_balancing": "1",
+                "active_nics": "vmnic1"
+            }
+        },
+
+        {
+            "name": "MGMT",
+            "vlan": "",
+            "vlan_type": "none",
+            "switchName": "MGMT-DVS",
+            "nic_teaming": {
+                "network_failover_detection": "1",
+                "notify_switches": "yes",
+                "load_balancing": "1",
+                "active_nics": "vmnic1"
+            }
+        },
+
+        {
+            "name": "GUEST",
+            "vlan": "",
+            "vlan_type": "none",
+            "switchName": "MGMT-DVS",
+            "nic_teaming": {
+                "network_failover_detection": "1",
+                "notify_switches": "yes",
+                "load_balancing": "1",
+                "active_nics": "vmnic1"
+            },
+            "cloud_network_type": "vxlan"
+        },
+
+        {
+            "name": "TRUNK",
+            "vlan": "1-4094",
+            "vlan_type": "trunk",
+            "switchName": "TRUNK-DVS"
+        }
+    ],
+
+    "vm_config": [
+        {
+            "server_role": "ESX-COMPUTE-ROLE",
+            "cpu": "4",
+            "memory_in_mb": "4096",
+            "nics": [
+                {
+                    "device": "eth0",
+                    "portGroup": "ESX-CONF",
+                    "type": "vmxnet3",
+                    "pci_id": ""
+                },
+                {
+                    "device": "eth1",
+                    "portGroup": "MGMT",
+                    "type": "vmxnet3",
+                    "pci_id": ""
+                }
+            ]
+        },
+
+        {
+            "server_role": "OVSVAPP-ROLE",
+            "cpu": "4",
+            "memory_in_mb": "4096",
+            "nics": [
+                {
+                    "device": "eth0",
+                    "portGroup": "ESX-CONF",
+                    "type": "vmxnet3",
+                    "pci_id": ""
+                },
+                {
+                    "device": "eth1",
+                    "portGroup": "MGMT",
+                    "type": "vmxnet3",
+                    "pci_id": ""
+                },
+                {
+                    "device": "eth2",
+                    "portGroup": "GUEST",
+                    "type": "vmxnet3",
+                    "pci_id": ""
+                },
+                {
+                    "device": "eth3",
+                    "portGroup": "TRUNK",
+                    "type": "vmxnet3",
+                    "pci_id": ""
+                }
+            ]
+        }
+    ],
+
+    "esx_conf_net": {
+        "portGroup": "ESX-CONF",
+        "cidr": "10.20.18.0/23",
+        "start_ip": "",
+        "end_ip": "",
+        "gateway": "10.20.18.1"
+    },
+
+    "template_info": {
+        "upload_to_cluster": false
+    }
+}
