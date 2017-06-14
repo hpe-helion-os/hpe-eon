@@ -1,5 +1,13 @@
 # -*- encoding: utf-8 -*-
 #
+# Modified By (c) Copyright 2017 Hewlett Packard Enterprise Development LP
+#
+# Confidential computer software. Valid license from HPE required for
+# possession, use or copying. Consistent with FAR 12.211 and 12.212,
+# Commercial Computer Software, Computer Software Documentation, and Technical
+# Data for Commercial Items are licensed to the U.S. Government under vendor's
+# standard commercial license.
+#
 # Copyright © 2012 New Dream Network, LLC (DreamHost)
 #
 # Author: Doug Hellmann <doug.hellmann@dreamhost.com>

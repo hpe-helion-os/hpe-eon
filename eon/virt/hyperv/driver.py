@@ -24,6 +24,7 @@ from eon.virt.common import utils as vir_utils
 from eon.common import exception
 import eon.db
 from oslo_config import cfg
+from oslo_config import types as oslo_config_types
 from eon.virt.hyperv import hyperv_utils
 
 LOG = logging.getLogger(__name__)
@@ -31,6 +32,7 @@ LOG = logging.getLogger(__name__)
 CONF = cfg.CONF
 HYPERV_ROOT_ACTIONS_OPTS = [
     cfg.ListOpt('supported_os_editions',
+               item_type=oslo_config_types.Integer(),
                default=[7, 8, 12, 13, 42],
                help='Supported Hyper-V host OS editions'),
 ]

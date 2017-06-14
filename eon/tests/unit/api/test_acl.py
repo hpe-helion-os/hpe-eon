@@ -26,9 +26,9 @@ class TestACL(base_test.TestCase):
     def test_install_auth(self):
         app = mock.MagicMock()
         public_routes = mock.MagicMock()
-        acl.install_auth(app, cfg.CONF, public_routes)
+        auth_token = acl.install_auth(app, cfg.CONF, public_routes)
 
     def test_install_audit(self):
         app = mock.MagicMock()
         public_routes = mock.MagicMock()
-        acl.install_audit(app, cfg.CONF, public_routes)
+        auth_token = acl.install_audit(app, cfg.CONF, public_routes)

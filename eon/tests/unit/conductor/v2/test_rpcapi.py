@@ -28,9 +28,10 @@ class TestConductorAPI(base_test.TestCase):
     def setUp(self, mock_transport):
         base_test.TestCase.setUp(self)
         conductor_rpcapi.proxy = mock.MagicMock()
-        conf = mock.MagicMock()
-        conf.transport_url = "rabbit://me:passwd@host:5672/virtual_host"
-        rpc.init(conf)
+        # NOTE(gyee): we really don't care about actually using oslo_messaging
+        # so we can just mock them.
+        rpc.TRANSPORT = mock.MagicMock()
+        rpc.NOTIFIER = mock.MagicMock()
         self.rpcapi = conductor_rpcapi.ConductorAPI(topic="fake-topic")
 
     def _test_rpcapi(self, method, *args, **kwargs):

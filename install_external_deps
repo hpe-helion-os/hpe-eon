@@ -1,0 +1,46 @@
+#!/bin/bash
+# (c) Copyright 2016-2017 Hewlett Packard Enterprise Development LP
+#
+# Confidential computer software. Valid license from HPE required for
+# possession, use or copying. Consistent with FAR 12.211 and 12.212,
+# Commercial Computer Software, Computer Software Documentation, and Technical
+# Data for Commercial Items are licensed to the U.S. Government under vendor's
+# standard commercial license.
+
+set -eu
+git_remote=$(git remote -v | grep origin | awk -F " " '{print $2}' | sed 1,1d)
+printf "git url being used - $git_remote \n\n"
+git_base_url=${git_remote%/*/*}
+printf "base url being used - $git_base_url \n\n"
+
+branch_name="hp/prerelease/newton"
+
+# egg_branch_array is an associative array with egg name
+# as the key and branchname as the value
+declare -A egg_branch_array
+egg_branch_array=( ["keystonemiddleware"]="$branch_name" )
+# to add more, do something like this:
+# egg_branch_array=( ["aceclient-1.0.0"]="ace_branch" ["siriusclient-1.0.0"]="sirius_branch")
+# for overriding branches just replace the variable with the branch name
+
+# egg_project_array is an associative array with egg name
+# as the key and project as the value
+declare -A egg_project_array
+egg_project_array=( ["keystonemiddleware"]="openstack/keystonemiddleware")
+# The above variable is required to find the project's git name .
+# This could have been avoided if there would have been a relationship
+# between the egg and the git.
+
+# to add more, do something like this:
+#egg_project_array=( ["aceclient-1.0.0"]="cloudsystem-ace-client" ["siriusclient-1.0.0"]="python-siriusclient")
+egg_names=(${!egg_branch_array[@]})
+for (( I=0; $I < ${#egg_branch_array[@]}; I+=1 )); do
+    e_name=${egg_names[$I]}
+    b_name=${egg_branch_array[$e_name]}
+    p_name=${egg_project_array[$e_name]}
+    echo "*****************"
+    url="git+""$git_base_url/$p_name@$b_name#egg=$e_name"
+    echo "executing command - pip install -e $url | tee intall_external_deps.log"
+    echo "*****************"
+    echo `pip install -e $url | tee install_external_deps.log`
+done
