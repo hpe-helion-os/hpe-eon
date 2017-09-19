@@ -39,6 +39,5 @@ setuptools.setup(
     scripts=['bin/eon-api',
              'bin/eon-conductor',
              'bin/eon-manage',
-             'bin/eon-oneview',
              ],
     py_modules=[])
