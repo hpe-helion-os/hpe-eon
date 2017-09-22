@@ -38,6 +38,7 @@ fixtures
 python-subunit>=0.0.18
 testrepository>=0.0.18
 os-testr
+keystonemiddleware==4.9.1
 
 # Optional packages that should be installed when testing
 pysendfile
