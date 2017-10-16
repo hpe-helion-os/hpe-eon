@@ -189,10 +189,25 @@ class Cleanup:
                 cluster['obj'], cluster['name'], False)])
         try:
             eon_env = OVSvAppUtil.get_eon_env(self.inputs.get('neutron'))
-            cmd = ("neutron ovsvapp-cluster-update --vcenter_id %s "
-                   "--clusters %s" % (vcenter_id, cluster_path))
+            os_user_dn = eon_env.get('OS_USER_DOMAIN_NAME')
+            os_project_dn = eon_env.get('OS_PROJECT_DOMAIN_NAME')
+            os_user_name = eon_env.get('OS_USERNAME')
+            os_passwd = eon_env.get('OS_PASSWORD')
+            os_project_name = eon_env.get('OS_PROJECT_NAME')
+            os_auth_url = eon_env.get('OS_AUTH_URL')
+            os_url = eon_env.get('OS_URL')
+            os_token = eon_env.get('OS_TOKEN')
+            cmd = ("neutron --os-user-domain %s --os-project-domain-name %s "
+                   "--os-username %s --os-password %s --os-project-name %s "
+                   "--os-auth-url %s --os-url %s --os-token %s "
+                   "ovsvapp-cluster-update --vcenter_id %s "
+                   "--clusters %s" % (os_user_dn, os_project_dn,
+                                      os_user_name, os_passwd,
+                                      os_project_name, os_auth_url,
+                                      os_url, os_token,
+                                      vcenter_id, cluster_path))
             command = cmd.split(" ")
-            OVSvAppUtil.exec_subprocess(command, eon_env)
+            OVSvAppUtil.exec_subprocess(command)
         except Exception as e:
             LOG.exception(e)
             raise OVSvAppException(_("Error occurred while invoking CLI "

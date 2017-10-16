@@ -14,7 +14,6 @@
 # under the License.
 #.
 
-import os
 import subprocess
 
 from concurrent.futures import as_completed
@@ -250,11 +249,9 @@ class OVSvAppUtil:
         return my_env
 
     @staticmethod
-    def exec_subprocess(command, env=None):
-        if not env:
-            env = os.environ
+    def exec_subprocess(command):
         output = subprocess.Popen(
-            command, env=env, stdout=subprocess.PIPE).communicate()[0]
+            command, stdout=subprocess.PIPE).communicate()[0]
         LOG.info(output)
         return output
 
