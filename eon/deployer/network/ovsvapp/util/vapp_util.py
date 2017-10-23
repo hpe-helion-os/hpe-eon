@@ -14,7 +14,6 @@
 # under the License.
 #.
 
-import os
 import subprocess
 
 from concurrent.futures import as_completed
