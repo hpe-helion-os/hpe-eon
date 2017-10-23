@@ -40,12 +40,28 @@ class VappInstaller:
         try:
             neutron = self.settings.get('neutron')
             eon_env = OVSvAppUtil.get_eon_env(neutron)
-            cmd = ("neutron ovsvapp-cluster-create --vcenter_id %s "
-                   "--clusters %s" % (vcenter_id, cluster_path))
+            os_user_dn = eon_env.get('OS_USER_DOMAIN_NAME')
+            os_project_dn = eon_env.get('OS_PROJECT_DOMAIN_NAME')
+            os_user_name = eon_env.get('OS_USERNAME')
+            os_passwd = eon_env.get('OS_PASSWORD')
+            os_project_name = eon_env.get('OS_PROJECT_NAME')
+            os_auth_url = eon_env.get('OS_AUTH_URL')
+            os_url = eon_env.get('OS_URL')
+            os_token = eon_env.get('OS_TOKEN')
+            cmd = ("neutron --os-user-domain-id %s "
+                   "--os-project-domain-name %s "
+                   "--os-username %s --os-password %s --os-project-name %s "
+                   "--os-auth-url %s --os-url %s --os-token %s "
+                   "ovsvapp-cluster-create --vcenter_id %s "
+                   "--clusters %s" % (os_user_dn, os_project_dn,
+                                      os_user_name, os_passwd,
+                                      os_project_name, os_auth_url,
+                                      os_url, os_token,
+                                      vcenter_id, cluster_path))
             LOG.info("Executing CLI to create cluster-vni allocations: "
                      "{}".format(cmd))
             command = cmd.split(" ")
-            output = OVSvAppUtil.exec_subprocess(command, eon_env)
+            output = OVSvAppUtil.exec_subprocess(command)
             if not output:
                 raise OVSvAppException(
                     "Got empty response while invoking CLI {}".format(cmd))
